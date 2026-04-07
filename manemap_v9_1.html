@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BHLXZM72F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4BHLXZM72F');
+  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mane Map — Find Your Hair System Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #1DC8C8;
+  --teal-dark: #0F9999;
+  --teal-glow: rgba(29,200,200,0.15);
+  --charcoal: #141420;
+  --charcoal-mid: #1e1e2e;
+  --charcoal-light: #2a2a3e;
+  --off-white: #F7F7F5;
+  --white: #ffffff;
+  --text-muted: #888899;
+  --text-light: #ccccdd;
+  --border: rgba(255,255,255,0.08);
+  --border-light: rgba(0,0,0,0.08);
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--off-white);
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(20,20,32,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo img { height: 36px; }
+.nav-logo-text { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800; color: white; letter-spacing: 0.05em; }
+.nav-logo-text span { color: var(--teal); }
+.nav-links { display: flex; align-items: center; gap: 2rem; }
+.nav-links a { color: var(--text-light); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+.nav-links a:hover { color: var(--teal); }
+.nav-cta {
+  background: var(--teal); color: var(--charcoal);
+  padding: 8px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+.nav-cta:hover { background: var(--teal-dark); color: white; transform: translateY(-1px); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  background: var(--charcoal);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 120px 2rem 80px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 800px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(29,200,200,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--teal-glow);
+  border: 1px solid rgba(29,200,200,0.3);
+  color: var(--teal); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 100px; margin-bottom: 2rem;
+}
+.hero-eyebrow::before { content: '●'; font-size: 8px; }
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 3.2vw, 48px);
+  font-weight: 800; line-height: 1.05;
+  color: white; letter-spacing: -0.02em;
+  max-width: 800px; margin-bottom: 1.5rem;
+}
+.hero h1 em { color: var(--teal); font-style: normal; }
+.hero-sub {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: var(--text-light); max-width: 540px;
+  line-height: 1.65; margin-bottom: 2.5rem;
+}
+.hero-sub strong { color: white; font-weight: 500; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem; }
+.btn-primary {
+  background: var(--teal); color: var(--charcoal);
+  padding: 14px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+  border: none; cursor: pointer;
+}
+.btn-primary:hover { background: white; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(29,200,200,0.3); }
+.btn-secondary {
+  background: transparent; color: white;
+  padding: 14px 28px; border-radius: 100px;
+  font-size: 15px; font-weight: 600; text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-secondary:hover { border-color: var(--teal); color: var(--teal); }
+.hero-stats {
+  display: flex; gap: 2.5rem; flex-wrap: wrap; justify-content: center;
+  border-top: 1px solid var(--border); padding-top: 2rem;
+}
+.hero-stat { text-align: center; }
+.hero-stat-num { font-family: 'DM Sans', sans-serif; font-size: 30px; font-weight: 600; color: var(--teal); letter-spacing: -0.02em; }
+.hero-stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── SECTION SHARED ── */
+section { padding: 80px 2rem; }
+.section-inner { max-width: 1100px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
+  color: var(--charcoal); margin-bottom: 1rem;
+}
+.section-sub { font-size: 17px; color: #555566; line-height: 1.65; max-width: 540px; }
+
+/* ── QUIZ SECTION ── */
+.quiz-section { background: var(--off-white); }
+.quiz-card {
+  background: white; border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--border-light);
+  overflow: hidden; margin-top: 3rem;
+}
+.quiz-progress { height: 3px; background: #eee; }
+.quiz-progress-fill { height: 100%; background: var(--teal); transition: width 0.4s ease; }
+.quiz-body { padding: 2.5rem; }
+.quiz-step { display: none; }
+.quiz-step.active { display: block; }
+.quiz-q { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; color: var(--charcoal); margin-bottom: 0.5rem; }
+.quiz-hint { font-size: 14px; color: var(--text-muted); margin-bottom: 1.75rem; }
+.quiz-options { display: grid; gap: 10px; }
+.quiz-opt {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 18px; border-radius: 12px;
+  border: 1.5px solid #e8e8f0; cursor: pointer;
+  transition: all 0.15s; font-size: 14px; font-weight: 500;
+  color: var(--charcoal); background: white;
+  text-align: left;
+}
+.quiz-opt:hover { border-color: var(--teal); background: #f0fefe; }
+.quiz-opt.selected { border-color: var(--teal); background: #e8fafa; color: var(--teal-dark); }
+.quiz-opt-icon { width: 36px; height: 36px; border-radius: 8px; background: #f3f3f8; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.quiz-opt.selected .quiz-opt-icon svg path, .quiz-opt.selected .quiz-opt-icon svg circle, .quiz-opt.selected .quiz-opt-icon svg rect { stroke: #0F9999; }
+.quiz-nav { display: flex; align-items: center; justify-content: space-between; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #f0f0f5; }
+.quiz-back { background: none; border: none; color: var(--text-muted); font-size: 14px; cursor: pointer; font-family: 'DM Sans', sans-serif; padding: 0; }
+.quiz-back:hover { color: var(--charcoal); }
+.quiz-next {
+  background: var(--teal); color: var(--charcoal);
+  border: none; padding: 12px 28px; border-radius: 100px;
+  font-size: 14px; font-weight: 700; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; transition: all 0.2s;
+}
+.quiz-next:hover { background: var(--teal-dark); color: white; }
+.quiz-next:disabled { opacity: 0.35; cursor: not-allowed; }
+.quiz-result { display: none; padding: 2.5rem; text-align: center; }
+.quiz-result.active { display: block; }
+.result-badge {
+  display: inline-block; background: var(--teal-glow); color: var(--teal-dark);
+  border: 1px solid rgba(29,200,200,0.3);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 100px; margin-bottom: 1.5rem;
+}
+.result-title { font-family: 'Syne', sans-serif; font-size: 28px; font-weight: 800; color: var(--charcoal); margin-bottom: 1rem; }
+.result-summary { font-size: 15px; color: #555566; line-height: 1.7; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+.result-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 2rem; text-align: left; }
+.result-card { background: #f7f7ff; border-radius: 12px; padding: 1rem 1.25rem; border: 1px solid #e8e8f5; }
+.result-card-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 4px; }
+.result-card-val { font-size: 15px; font-weight: 600; color: var(--charcoal); }
+
+/* ── SALONS ── */
+.salons-section { background: white; }
+.salon-filters { display: flex; gap: 8px; flex-wrap: wrap; margin: 2rem 0 1.5rem; }
+.filter-btn {
+  padding: 7px 16px; border-radius: 100px; font-size: 13px; font-weight: 500;
+  border: 1.5px solid #dde; color: #555566; background: white; cursor: pointer;
+  transition: all 0.15s; font-family: 'DM Sans', sans-serif;
+}
+.filter-btn:hover, .filter-btn.active { background: var(--teal); color: white; border-color: var(--teal); }
+.salon-search {
+  width: 100%; padding: 14px 18px; border-radius: 12px;
+  border: 1.5px solid #e8e8f0; font-size: 15px; font-family: 'DM Sans', sans-serif;
+  color: var(--charcoal); background: var(--off-white); outline: none;
+  transition: border-color 0.2s; margin-bottom: 1.5rem;
+}
+.salon-search:focus { border-color: var(--teal); background: white; }
+.salons-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.salon-card {
+  background: white; border-radius: 16px;
+  border: 1.5px solid #e8e8f0; padding: 1.5rem;
+  transition: all 0.2s; cursor: pointer;
+  text-decoration: none; color: inherit;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.salon-card:hover { border-color: var(--teal); box-shadow: 0 8px 32px rgba(29,200,200,0.12); transform: translateY(-2px); }
+.salon-card-header { display: flex; align-items: flex-start; gap: 12px; }
+.salon-avatar {
+  width: 48px; height: 48px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 800;
+  color: white; flex-shrink: 0;
+}
+.salon-card-name { font-family: 'Syne', sans-serif; font-size: 16px; font-weight: 700; color: var(--charcoal); line-height: 1.2; margin-bottom: 3px; }
+.salon-card-location { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+.salon-verified { display: inline-flex; align-items: center; gap: 4px; background: #e8fafa; color: var(--teal-dark); font-size: 11px; font-weight: 700; letter-spacing: 0.05em; padding: 3px 8px; border-radius: 100px; width: fit-content; }
+.salon-bio { font-size: 13px; color: #666677; line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.salon-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.salon-tag { font-size: 11px; padding: 3px 10px; border-radius: 100px; background: #f3f3fa; color: #555566; font-weight: 500; }
+.salon-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid #f0f0f5; }
+.salon-book { font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; display: flex; align-items: center; gap: 4px; }
+.salon-ig { font-size: 12px; color: var(--text-muted); text-decoration: none; }
+.salon-ig:hover { color: var(--charcoal); }
+.no-results { text-align: center; padding: 3rem; color: var(--text-muted); font-size: 15px; display: none; }
+
+/* ── HOW IT WORKS ── */
+.how-section { background: var(--charcoal); }
+.how-section .section-title { color: white; }
+.how-section .section-sub { color: var(--text-light); }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2px; margin-top: 3rem; }
+.step-card {
+  background: var(--charcoal-mid); padding: 2rem 1.75rem;
+  position: relative; overflow: hidden;
+}
+.step-card:first-child { border-radius: 16px 0 0 16px; }
+.step-card:last-child { border-radius: 0 16px 16px 0; }
+.step-num {
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600;
+  color: var(--teal); letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 0.75rem; opacity: 0.7;
+}
+.step-icon { margin-bottom: 1rem; line-height: 1; }
+.step-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+.step-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+/* ── CHATBOT ── */
+.chat-section { background: var(--off-white); }
+.chat-wrapper {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
+  align-items: center; margin-top: 3rem;
+}
+.chat-copy .section-title { margin-bottom: 1rem; }
+.chat-copy p { font-size: 16px; color: #555566; line-height: 1.7; margin-bottom: 1.5rem; }
+.chat-demo {
+  background: white; border-radius: 20px;
+  border: 1.5px solid #e8e8f0;
+  box-shadow: var(--card-shadow); overflow: hidden;
+}
+.chat-demo-header {
+  background: var(--charcoal); padding: 14px 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.chat-demo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
+.chat-demo-title { font-size: 13px; font-weight: 600; color: white; }
+.chat-demo-status { font-size: 11px; color: var(--teal); margin-left: auto; }
+.chat-messages { padding: 1.25rem; display: flex; flex-direction: column; gap: 12px; min-height: 260px; }
+.chat-msg { display: flex; gap: 8px; max-width: 88%; }
+.chat-msg.bot { align-self: flex-start; }
+.chat-msg.user { align-self: flex-end; flex-direction: row-reverse; }
+.chat-av { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; margin-top: 2px; }
+.bot .chat-av { background: var(--teal); color: var(--charcoal); }
+.user .chat-av { background: #eee; color: #666; }
+.chat-bubble { padding: 10px 14px; border-radius: 14px; font-size: 13px; line-height: 1.6; }
+.bot .chat-bubble { background: #f3f3fa; color: var(--charcoal); border-radius: 2px 14px 14px 14px; }
+.user .chat-bubble { background: var(--teal); color: var(--charcoal); border-radius: 14px 2px 14px 14px; font-weight: 500; }
+.chat-input-row { padding: 12px; border-top: 1px solid #f0f0f5; display: flex; gap: 8px; }
+.chat-input-fake { flex: 1; background: #f7f7f9; border-radius: 100px; padding: 10px 16px; font-size: 13px; color: #aaa; }
+.chat-send { width: 36px; height: 36px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+
+/* ── FOR SALONS ── */
+.salons-pitch { background: white; }
+.pitch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+.pitch-features { display: flex; flex-direction: column; gap: 1.5rem; }
+.pitch-feature { display: flex; gap: 1rem; align-items: flex-start; }
+.pitch-icon { width: 40px; height: 40px; border-radius: 10px; background: #e8fafa; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.pitch-feature-title { font-weight: 600; color: var(--charcoal); margin-bottom: 3px; font-size: 15px; }
+.pitch-feature-desc { font-size: 14px; color: #666677; line-height: 1.6; }
+.pitch-cta-card {
+  background: var(--charcoal); border-radius: 20px; padding: 2.5rem;
+  text-align: center;
+}
+.pitch-cta-card h3 { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 800; color: white; margin-bottom: 0.75rem; }
+.pitch-cta-card p { font-size: 15px; color: var(--text-light); margin-bottom: 2rem; line-height: 1.6; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--charcoal); padding: 3rem 2rem;
+  text-align: center; border-top: 1px solid var(--border);
+}
+.footer-logo { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; color: white; letter-spacing: 0.05em; margin-bottom: 1rem; }
+.footer-logo span { color: var(--teal); }
+.footer-links { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.footer-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--teal); }
+.footer-copy { font-size: 12px; color: #444455; }
+.footer-copy a { color: var(--teal); text-decoration: none; }
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+  display: none; align-items: center; justify-content: center;
+  z-index: 200; padding: 1rem; backdrop-filter: blur(4px);
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: white; border-radius: 20px; padding: 2.5rem;
+  max-width: 520px; width: 100%; position: relative;
+  max-height: 85vh; overflow-y: auto;
+}
+.modal-close {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  background: #f3f3f8; border: none; border-radius: 50%;
+  width: 32px; height: 32px; cursor: pointer; font-size: 16px;
+  display: flex; align-items: center; justify-content: center;
+  color: #666; transition: background 0.15s;
+}
+.modal-close:hover { background: #e8e8f0; }
+.modal h2 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; margin-bottom: 0.5rem; }
+.modal-location { font-size: 14px; color: var(--text-muted); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 4px; }
+.modal-verified { display: inline-flex; align-items: center; gap: 4px; background: #e8fafa; color: var(--teal-dark); font-size: 11px; font-weight: 700; letter-spacing: 0.05em; padding: 4px 10px; border-radius: 100px; margin-bottom: 1.25rem; }
+.modal-bio { font-size: 14px; color: #444455; line-height: 1.7; margin-bottom: 1.5rem; }
+.modal-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.75rem; }
+.modal-tag { font-size: 12px; padding: 4px 12px; border-radius: 100px; background: #f3f3fa; color: #555566; font-weight: 500; }
+.modal-actions { display: flex; flex-direction: column; gap: 10px; }
+.modal-btn-primary {
+  background: var(--teal); color: var(--charcoal);
+  padding: 13px; border-radius: 100px; text-align: center;
+  font-size: 15px; font-weight: 700; text-decoration: none;
+  display: block; transition: all 0.2s;
+}
+.modal-btn-primary:hover { background: var(--teal-dark); color: white; }
+.modal-btn-secondary {
+  background: #f3f3fa; color: #555566;
+  padding: 12px; border-radius: 100px; text-align: center;
+  font-size: 14px; font-weight: 600; text-decoration: none;
+  display: block; transition: background 0.2s;
+}
+.modal-btn-secondary:hover { background: #e8e8f5; color: var(--charcoal); }
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .chat-wrapper, .pitch-grid { grid-template-columns: 1fr; }
+  .steps-grid { grid-template-columns: 1fr; }
+  .step-card:first-child { border-radius: 16px 16px 0 0; }
+  .step-card:last-child { border-radius: 0 0 16px 16px; }
+  .hero-stats { gap: 1.5rem; }
+  .salons-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="https://i.imgur.com/Yvy8GSl.png" alt="Mane Map" style="height:58px;width:58px;object-fit:contain;border-radius:10px;background:white;padding:3px;flex-shrink:0;">
+    <div>
+      <div style="font-family:'Syne',sans-serif;font-size:21px;font-weight:800;color:white;letter-spacing:0.07em;line-height:1.1;">MANE MAP</div>
+      <div style="font-size:9px;color:#1DC8C8;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;line-height:1;">Hair System Directory</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#quiz">Get Started</a>
+    <a href="#specialists">Find a Specialist</a>
+    <a href="#how">How It Works</a>
+    <a href="#for-salons">For Salons</a>
+  </div>
+  <a href="#quiz" class="nav-cta">Take the Quiz →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://i.imgur.com/Yvy8GSl.png" alt="Mane Map" style="height:72px;width:auto;border-radius:14px;margin-bottom:1rem;">
+  <div style="font-size:12px;font-weight:700;color:#1DC8C8;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Because bald is NOT a hairstyle</div>
+  <div class="hero-eyebrow">Verified specialists only</div>
+  <h1>The smarter way to find your <em>hair system specialist</em></h1>
+  <p class="hero-sub">
+    Most guys spend months researching hair systems online and still walk into their first appointment 
+    unprepared. <strong>Mane Map changes that.</strong> Verified specialists. Real client education. Walk in confident.
+  </p>
+  <div class="hero-actions">
+    <a href="#quiz" class="btn-primary">Take the Readiness Quiz →</a>
+    <a href="#specialists" class="btn-secondary">Browse Specialists</a>
+  </div>
+  <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);max-width:480px;margin-left:auto;margin-right:auto;text-align:center;">
+    <p style="color:#888;font-size:13px;margin:0 0 0.75rem;">Not ready for the quiz yet? Get the free hair system guide.</p>
+    <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=hero&utm_campaign=lead_capture" target="_blank" style="display:inline-flex;align-items:center;background:#1DC8C8;color:#141420;text-decoration:none;padding:10px 22px;border-radius:100px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;">Get the free guide →</a>
+    <p style="color:#444;font-size:11px;margin:8px 0 0;">No spam. Unsubscribe anytime.</p>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-num">22</div>
+      <div class="hero-stat-label">Verified specialists</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">15+</div>
+      <div class="hero-stat-label">States covered</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">92+</div>
+      <div class="hero-stat-label">Clients matched</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUIZ -->
+<section class="quiz-section" id="quiz">
+  <div class="section-inner">
+    <div class="section-eyebrow">Get Started</div>
+    <h2 class="section-title">Are you ready for a hair system?</h2>
+    <p class="section-sub" style="text-align:center;max-width:560px;margin:0 auto;">5 quick questions. We'll tell you exactly what to expect — costs, base type, and what to say at your first consultation.</p>
+
+    <div class="quiz-card">
+      <div class="quiz-progress">
+        <div class="quiz-progress-fill" id="quizProgress" style="width:20%"></div>
+      </div>
+      <div class="quiz-body" id="quizBody">
+
+        <!-- Step 1 -->
+        <div class="quiz-step active" data-step="1">
+          <div class="quiz-q">Where are you at right now?</div>
+          <div class="quiz-hint">No wrong answers. We've all been somewhere on this list.</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="researching" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5" stroke="#888" stroke-width="1.5"/><path d="M12 12L15 15" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Just researching — not ready to commit yet
+            </button>
+            <button class="quiz-opt" data-val="ready" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="2" width="14" height="14" rx="4" stroke="#888" stroke-width="1.5"/><path d="M6 9L8 11L12 7" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Ready to book — just need to find someone good
+            </button>
+            <button class="quiz-opt" data-val="switching" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9a6 6 0 0 1 6-6M15 9a6 6 0 0 1-6 6M13 5l2-2 2 2M3 11l-2 2 2 2" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Already wearing — looking to switch stylists
+            </button>
+            <button class="quiz-opt" data-val="returning" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v6l4 2" stroke="#888" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="9" r="6" stroke="#888" stroke-width="1.5"/></svg></span> Wore one before — thinking about getting back into it
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <span></span>
+            <button class="quiz-next" onclick="nextStep(1)" disabled id="next1">Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="quiz-step" data-step="2">
+          <div class="quiz-q">What's your lifestyle like?</div>
+          <div class="quiz-hint">This determines which base type works best for you.</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="active" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 9h2M14 9h2M4 9h10M4 6v6M14 6v6M6 7.5v3M12 7.5v3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Very active — gym, sports, sweating regularly
+            </button>
+            <button class="quiz-opt" data-val="moderate" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="4" r="2" stroke="#888" stroke-width="1.5"/><path d="M9 6v5M6 9l3 2 3-2M7 14l-1 3M11 14l1 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Moderate — walks, occasional workouts
+            </button>
+            <button class="quiz-opt" data-val="chill" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="7" width="14" height="9" rx="2" stroke="#888" stroke-width="1.5"/><path d="M6 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" stroke="#888" stroke-width="1.5"/></svg></span> Mostly office / low activity
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="prevStep(2)">← Back</button>
+            <button class="quiz-next" onclick="nextStep(2)" disabled id="next2">Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="quiz-step" data-step="3">
+          <div class="quiz-q">How hands-on do you want to be?</div>
+          <div class="quiz-hint">Honest question — no judgment either way.</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="diy" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M10.5 3.5a4 4 0 0 1-5 5.5L3 11.5 6.5 15l2.5-2.5a4 4 0 0 1 5.5-5L10.5 3.5z" stroke="#888" stroke-width="1.5" stroke-linejoin="round"/></svg></span> Full DIY — buy &amp; install my own system, no salon
+            </button>
+            <button class="quiz-opt" data-val="partial" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3v12M3 9h12" stroke="#888" stroke-width="1.5" stroke-linecap="round"/><circle cx="9" cy="9" r="6" stroke="#888" stroke-width="1.5"/></svg></span> Mixed — salon installs my system, I maintain at home
+            </button>
+            <button class="quiz-opt" data-val="fullsalon" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="5" y="2" width="8" height="14" rx="2" stroke="#888" stroke-width="1.5"/><path d="M8 5h2M8 8h2M8 11h2" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Full salon — they handle everything, every visit
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="prevStep(3)">← Back</button>
+            <button class="quiz-next" onclick="nextStep(3)" disabled id="next3">Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="quiz-step" data-step="4">
+          <div class="quiz-q">What's your realistic monthly budget?</div>
+          <div class="quiz-hint">Including both system replacement and maintenance.</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="low" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#888" stroke-width="1.5"/><path d="M9 6v1m0 4v1M7.5 10a1.5 1.5 0 0 0 3 0c0-.8-.7-1.3-1.5-1.5S7.5 9 7.5 8a1.5 1.5 0 0 1 3 0" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Under $175/month</button>
+            <button class="quiz-opt" data-val="mid" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#888" stroke-width="1.5"/><path d="M9 6v1m0 4v1M7.5 10a1.5 1.5 0 0 0 3 0c0-.8-.7-1.3-1.5-1.5S7.5 9 7.5 8a1.5 1.5 0 0 1 3 0" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> $150–$250/month
+            </button>
+            <button class="quiz-opt" data-val="high" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#888" stroke-width="1.5"/><path d="M9 6v1m0 4v1M7.5 10a1.5 1.5 0 0 0 3 0c0-.8-.7-1.3-1.5-1.5S7.5 9 7.5 8a1.5 1.5 0 0 1 3 0" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> $250–$400/month
+            </button>
+            <button class="quiz-opt" data-val="unsure" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="6" stroke="#888" stroke-width="1.5"/><path d="M7 7a2 2 0 1 1 3.7 1C10.4 8.5 9 9 9 10M9 12.5v.5" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Not sure yet — just show me the real numbers
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="prevStep(4)">← Back</button>
+            <button class="quiz-next" onclick="nextStep(4)" disabled id="next4">Next →</button>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="quiz-step" data-step="5">
+          <div class="quiz-q">What's your biggest concern?</div>
+          <div class="quiz-hint">The one thing keeping you up at 2am.</div>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-val="natural" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M1 9s3-6 8-6 8 6 8 6-3 6-8 6-8-6-8-6z" stroke="#888" stroke-width="1.5"/><circle cx="9" cy="9" r="2.5" stroke="#888" stroke-width="1.5"/></svg></span> Will it look natural / undetectable?
+            </button>
+            <button class="quiz-opt" data-val="cost" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="2" y="5" width="14" height="10" rx="2" stroke="#888" stroke-width="1.5"/><path d="M2 8h14M6 3l1 2M12 3l-1 2" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Hidden costs / ongoing expenses
+            </button>
+            <button class="quiz-opt" data-val="judgment" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="7" cy="6" r="3" stroke="#888" stroke-width="1.5"/><path d="M1 15a6 6 0 0 1 12 0" stroke="#888" stroke-width="1.5" stroke-linecap="round"/><path d="M13 8a3 3 0 0 1 0 6M15 9.5a5 5 0 0 1 0 3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> What will people think?
+            </button>
+            <button class="quiz-opt" data-val="maintenance" onclick="selectOpt(this)">
+              <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 15l9-9M14 3a3 3 0 0 0-3 3l-1 1 3 3 1-1a3 3 0 0 0 3-3 3 3 0 0 0-3-3z" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Maintenance being too complicated
+            </button>
+          </div>
+          <div class="quiz-nav">
+            <button class="quiz-back" onclick="prevStep(5)">← Back</button>
+            <button class="quiz-next" onclick="showResult()" disabled id="next5">See My Results →</button>
+          </div>
+        </div>
+
+      </div><!-- end quiz-body -->
+
+      <!-- Result -->
+      <div class="quiz-result" id="quizResult">
+        <div class="result-badge">✓ Your Mane Map Profile</div>
+        <div class="result-title" id="resultTitle">Loading your results...</div>
+        <div class="result-summary" id="resultSummary"></div>
+        <div class="result-cards" id="resultCards"></div>
+        <a href="https://tally.so/r/wzpXA0?utm_source=manemap&utm_medium=quiz&utm_campaign=getmatched" target="_blank" class="btn-primary" style="display:inline-flex;margin-bottom:1rem">Get Matched with a Specialist →</a>
+        <p style="font-size:12px;color:#888;margin-bottom:0.75rem;">We'll connect you with the right specialist in your area based on your answers.</p>
+        <a href="#specialists" style="font-size:13px;color:var(--teal);text-decoration:none;" onclick="document.getElementById('quizResult').style.display='none';document.getElementById('quizBody').style.display='block'">Or browse the full directory →</a>
+        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #eee;text-align:left;">
+          <p style="font-size:13px;font-weight:700;color:#141420;margin:0 0 0.5rem;">Before your appointment, read this:</p>
+          <a href="#education" style="font-size:13px;color:var(--teal);text-decoration:none;display:flex;align-items:center;gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            What to expect, what to ask, and what maintenance looks like →
+          </a>
+        </div>
+        <br>
+        <button onclick="restartQuiz()" style="background:none;border:none;color:var(--text-muted);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;">Retake quiz</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education" style="background:#f7f7f5;padding:5rem 1.5rem;">
+  <div style="max-width:960px;margin:0 auto;">
+
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-eyebrow">Before Your Appointment</div>
+      <h2 class="section-title">Know before you go.</h2>
+      <p class="section-sub" style="max-width:580px;margin:0 auto;">Most guys walk into their first consultation not knowing what to ask. Here's what you need to know beforehand — so you show up like you've done this before.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+
+      <!-- Card 1 - Base Types (full width, most content) -->
+      <div style="background:#fff;border-radius:14px;padding:2rem;border:1px solid #e8e8f0;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
+          <div style="width:40px;height:40px;background:#141420;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#1DC8C8" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:#141420;margin:0;">Understanding base types</h3>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+          <div style="background:#f7f7f5;border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:13px;color:#141420;margin-bottom:6px;">Thin Skin Poly</div>
+            <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">Most natural-looking hairline. Best for exposed styles — slicked back, brushed up. Easy to clean, takes adhesive well. May feel warm for heavy sweaters. Lasts 2–3 months.</p>
+          </div>
+          <div style="background:#f7f7f5;border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:13px;color:#141420;margin-bottom:6px;">Thicker Poly (0.06–0.08mm)</div>
+            <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">Best for obscured or partially exposed hairlines — forward, tousled, messy styles. Slightly more visible edge, hidden naturally by your hairstyle. Lasts 4–5 months.</p>
+          </div>
+          <div style="background:#f7f7f5;border-radius:10px;padding:1rem;">
+            <div style="font-weight:700;font-size:13px;color:#141420;margin-bottom:6px;">Lace / Hybrid</div>
+            <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">Most breathable and comfortable. Best for active lifestyles and heavy sweaters. Lasts 4–5 months. Requires more careful maintenance than poly.</p>
+          </div>
+        </div>
+        <p style="font-size:12px;color:#1DC8C8;font-weight:700;margin:1rem 0 0;">Active + heavy sweater → lace or hybrid &nbsp;·&nbsp; Exposed hairline style → thin skin poly &nbsp;·&nbsp; Obscured style → thicker poly</p>
+      </div>
+
+      <!-- Row of 3 shorter cards -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;">
+
+        <!-- Card 2 - 24-48 hours -->
+        <div style="background:#fff;border-radius:14px;padding:1.75rem;border:1px solid #e8e8f0;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+            <div style="width:40px;height:40px;background:#141420;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3v10M6 9l4 4 4-4" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 17h12" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#141420;margin:0;">First 24–48 hours</h3>
+          </div>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0 0 0.75rem;">Give your bond 24–48 hours to fully set before any water — no showers, swimming, or heavy sweating.</p>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">A shower cap is your best friend for the first couple days. After that you're good to go.</p>
+        </div>
+
+        <!-- Card 3 - Week one -->
+        <div style="background:#fff;border-radius:14px;padding:1.75rem;border:1px solid #e8e8f0;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+            <div style="width:40px;height:40px;background:#141420;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="8" r="4" stroke="#1DC8C8" stroke-width="1.5"/><path d="M4 17c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#141420;margin:0;">Week one reality check</h3>
+          </div>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0 0 0.75rem;">The first week is the hardest — not physically, just mentally. You'll check the mirror constantly. You'll wonder if people can tell. They can't.</p>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">By week two most guys just see their hair. The guys who struggle longest walked in without realistic expectations. Now you have them.</p>
+        </div>
+
+        <!-- Card 4 - Maintenance -->
+        <div style="background:#fff;border-radius:14px;padding:1.75rem;border:1px solid #e8e8f0;">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+            <div style="width:40px;height:40px;background:#141420;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 14h12M7 14V8M10 14V5M13 14v-4" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </div>
+            <h3 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#141420;margin:0;">What maintenance looks like</h3>
+          </div>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0 0 0.75rem;"><strong style="color:#141420;">Partial DIY</strong> — salon installs your new system, you maintain at home every 10–14 days. Each session involves removing the system, cleaning old adhesive from the base and scalp, prepping the scalp, and re-adhering with your preferred adhesive. About 1.5 hours including the shower. Muscle memory by month three.</p>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0;"><strong style="color:#141420;">Full salon</strong> — they handle everything, every visit. Simpler, costs more. Worth it for a lot of guys.</p>
+        </div>
+
+      </div>
+
+      <!-- Card 5 - Questions (full width) -->
+      <div style="background:#141420;border-radius:14px;padding:2rem;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
+          <div style="width:40px;height:40px;background:rgba(29,200,200,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 6h14M3 10h10M3 14h6" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3 style="font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:white;margin:0;">Questions to ask at your first appointment</h3>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;">
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What bases do you specialize in?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What adhesive do you use and why?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">Do you work with systems clients bring in?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What does the maintenance schedule look like?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">Can you walk me through home maintenance?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What's the realistic replacement timeline?</span></div>
+        </div>
+        <p style="font-size:12px;color:#1DC8C8;font-weight:700;margin:1.25rem 0 0;">A specialist who welcomes these questions is the right one.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALISTS -->
+<section class="salons-section" id="specialists">
+  <div class="section-inner">
+    <div class="section-eyebrow">The Directory</div>
+    <h2 class="section-title" style="text-align:center;">Find your specialist</h2>
+    <p class="section-sub" style="text-align:center;max-width:560px;margin:0 auto 1.5rem;">Every specialist is hand-screened by Mane Map. We do the vetting so you don't have to.</p>
+    <input type="text" class="salon-search" id="salonSearch" placeholder="🔍  Search by name, city, or state..." oninput="filterSalons()">
+    <div class="salon-filters" id="stateFilters"></div>
+    <div class="salons-grid" id="salonsGrid"></div>
+    <div class="no-results" id="noResults">No specialists found for that search. <a href="https://tally.so/r/wzpXA0" style="color:var(--teal)">Get notified when we add one near you →</a></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--teal)">The process</div>
+    <h2 class="section-title">From overwhelmed to walking in ready</h2>
+    <p class="section-sub" style="color:var(--text-light)">Most guys spend weeks feeling lost before their first appointment. Here's the path that changes that.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">Step 01</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="3" width="20" height="22" rx="4" stroke="#1DC8C8" stroke-width="1.5"/><path d="M9 9h10M9 13h10M9 17h6" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="step-title">Take the quiz</div>
+        <div class="step-desc">5 questions. Get your base type recommendation, real cost range, and exactly what to say at your first appointment.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 02</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3a8 8 0 0 1 8 8c0 5.5-8 14-8 14S6 16.5 6 11a8 8 0 0 1 8-8z" stroke="#1DC8C8" stroke-width="1.5"/><circle cx="14" cy="11" r="3" stroke="#1DC8C8" stroke-width="1.5"/></svg></div>
+        <div class="step-title">Find your match</div>
+        <div class="step-desc">Browse verified specialists filtered by location and expertise. Every specialist is hand-screened — we do the vetting so you don't have to.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 03</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14l4 4 6-8M14 18l5-5 5 3" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="8" r="3" stroke="#1DC8C8" stroke-width="1.5"/></svg></div>
+        <div class="step-title">Book educated</div>
+        <div class="step-desc">Arrive knowing what base type suits your lifestyle, what to realistically budget (every salon prices differently — we give you ranges, not guarantees), and exactly what to ask. Walk in confident, not overwhelmed.</div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">Step 04</div>
+        <div class="step-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 6h20v14a2 2 0 0 1-2 2H8l-4 3V6z" stroke="#1DC8C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12h10M9 16h6" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="step-title">Ask anything, anytime</div>
+        <div class="step-desc">Hair system questions don't keep business hours. ManeMap AI is there at 11pm when you notice something weird and just need a straight answer.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHAT COMING SOON -->
+<section class="chat-section" id="chat">
+  <div class="section-inner">
+    <div class="chat-wrapper">
+      <div class="chat-copy">
+        <div class="section-eyebrow">ManeMap AI</div>
+        <h2 class="section-title">Your 2am questions, answered.</h2>
+        <p>Hair system questions don't keep business hours. ManeMap AI will know costs, maintenance, what's normal, and what's not — available whenever you need it, with answers that actually make sense.</p>
+        <p>Built on real wearer experience. No generic chatbot fluff.</p>
+      </div>
+      <div class="chat-demo" style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2.5rem;text-align:center;min-height:320px;">
+        <div style="width:56px;height:56px;border-radius:16px;background:#1D9E75;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="15" rx="5" stroke="white" stroke-width="1.5"/><path d="M8 14h4M8 18h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M14 4v3" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="3" r="1.5" fill="white"/></svg>
+        </div>
+        <div style="display:inline-flex;align-items:center;gap:6px;background:#E1F5EE;color:#085041;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:1rem;">
+          <span style="width:6px;height:6px;background:#1D9E75;border-radius:50%;display:inline-block;"></span>
+          Coming soon
+        </div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--charcoal);margin-bottom:0.75rem;">ManeMap AI is in development</h3>
+        <p style="font-size:14px;color:#555566;line-height:1.65;margin-bottom:1.75rem;max-width:300px;">An AI that actually knows hair systems — not a generic chatbot. Be the first to know when it launches.</p>
+        <a href="https://tally.so/r/Y5YXP6?utm_source=manemap&utm_medium=site&utm_campaign=ai_waitlist" target="_blank" style="display:inline-block;background:#1D9E75;color:white;text-decoration:none;padding:11px 24px;border-radius:100px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;">Join the AI waitlist →</a>
+        <p style="font-size:11px;color:#aaa;margin-top:10px;">No spam. Just a heads up when it's ready.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR SALONS -->
+<section class="salons-pitch" id="for-salons">
+  <div class="section-inner">
+    <div class="pitch-grid">
+      <div>
+        <div class="section-eyebrow">For Specialists</div>
+        <h2 class="section-title">Your clients arrive educated. You focus on the work.</h2>
+        <p class="section-sub" style="margin-bottom:2rem">Mane Map sends you clients who already know their budget, understand the basics, and are ready to book — not clients who need a 45-minute education session first.</p>
+        <div class="pitch-features">
+          <div class="pitch-feature">
+            <div class="pitch-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#1DC8C8" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="pitch-feature-title">Verified profile listing</div>
+              <div class="pitch-feature-desc">Your expertise, portfolio, and booking link in front of wearers actively searching in your area.</div>
+            </div>
+          </div>
+          <div class="pitch-feature">
+            <div class="pitch-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 4h5v12H4zM11 4h5v12h-5z" stroke="#1DC8C8" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="pitch-feature-title">Your consultation starts at step 3, not step 1</div>
+              <div class="pitch-feature-desc">Clients from Mane Map already know their base type, their realistic budget, and what to expect before they sit in your chair. That's hours back in your week you're not spending on the basics.</div>
+            </div>
+          </div>
+          <div class="pitch-feature">
+            <div class="pitch-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="7" width="14" height="10" rx="3" stroke="#1DC8C8" stroke-width="1.5"/><path d="M7 11h2M11 11h2M10 4v3" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="3" r="1" fill="#1DC8C8"/></svg></div>
+            <div>
+              <div class="pitch-feature-title">AI handles aftercare Q&A</div>
+              <div class="pitch-feature-desc">Your clients troubleshoot aftercare with ManeMap AI instead of texting you after hours. Your phone stays quiet.</div>
+            </div>
+          </div>
+          <div class="pitch-feature">
+            <div class="pitch-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 14l5-5 4 3 5-7" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div>
+              <div class="pitch-feature-title">Free during beta</div>
+              <div class="pitch-feature-desc">We're building this alongside specialists, not for them. Join now, shape how it works, and lock in your profile before we open paid tiers.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pitch-cta-card">
+        <h3>Join the directory</h3>
+        <p>21 specialists already listed. Clients actively searching. Takes 5 minutes to apply.</p>
+        <a href="https://tally.so/r/mZqXyv?utm_source=manemap&utm_medium=site&utm_campaign=specialist" class="btn-primary" style="display:block;margin-bottom:12px">Apply as a Specialist →</a>
+        <p style="font-size:13px;color:#888899;margin:0">Free to join during beta. Built by <a href="https://www.instagram.com/jaredhashair/" target="_blank" style="color:var(--teal);text-decoration:none">@jaredhashair</a> — a wearer himself.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:1.25rem;">
+    <img src="https://i.imgur.com/Yvy8GSl.png" alt="Mane Map" style="height:34px;width:34px;object-fit:contain;border-radius:8px;background:rgba(255,255,255,0.12);padding:2px;">
+    <span style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:white;letter-spacing:0.08em;">MANE MAP</span>
+  </div>
+  <div class="footer-links">
+    <a href="#quiz">Get Started</a>
+    <a href="#specialists">Find a Specialist</a>
+    <a href="#for-salons">For Salons</a>
+    <a href="https://tally.so/r/wzpXA0">Join as a Client</a>
+    <a href="https://tally.so/r/mZqXyv?utm_source=manemap&utm_medium=site&utm_campaign=specialist">Join as a Specialist</a>
+    <a href="mailto:hello@manemap.com">Contact</a>
+  </div>
+  <div class="footer-copy">Built by <a href="https://www.instagram.com/jaredhashair/" target="_blank">@jaredhashair</a> — a real wearer. &nbsp;·&nbsp; © 2026 Mane Map</div>
+</footer>
+
+<!-- SALON MODAL -->
+<div class="modal-overlay" id="salonModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h2 id="modalName"></h2>
+    <div class="modal-location" id="modalLocation"></div>
+    <div class="modal-verified">✓ Mane Map Verified</div>
+    <div class="modal-bio" id="modalBio"></div>
+    <div class="modal-tags" id="modalTags"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<script>
+// ── SALON DATA ──
+const salons = [
+  { name: "Aceoffades 212 Hair Replacement", contact: "Marcos", city: "New York City", state: "NY", ig: "aceoffades212_", igurl: "https://www.instagram.com/aceoffades212_/", website: "https://aceoffades.com", bio: "Handles straight, afro, and curly hair systems. Clients can bring their own system. 8+ years in the industry with a focus on customer satisfaction from service to aftercare instructions.", tags: ["All textures", "BYO system ok", "8+ yrs experience"] },
+  { name: "April T.", contact: "April Telman", city: "Chicago", state: "IL", ig: "aprilt.ailoredhair", igurl: "https://www.instagram.com/aprilt.ailoredhair", website: "https://salonlofts.com/april_telman/schedule", bio: "20+ years in the hair industry. Has perfected the hairline to give the most realistic and natural look so clients feel the most confident after getting their hair system.", tags: ["Hairline specialist", "Natural look", "20+ yrs experience"] },
+  { name: "Apex Hair Systems", contact: "Benjamin Medina", city: "Macon", state: "GA", ig: "benjamin_barber_", igurl: "https://www.instagram.com/benjamin_barber_", website: "https://apexhairsystems.com", bio: "9-year barber with 1 year dedicated to hair systems. Passionate about the life-changing before and after results that hair systems deliver for clients.", tags: ["Hair systems", "Barber background", "Before & after specialist"] },
+  { name: "Argyle Hair Solutions", contact: "Rochelle", city: "Bountiful", state: "UT", ig: "toupeesbyargyle", igurl: "https://www.instagram.com/toupeesbyargyle", website: "https://argylehairsolutions.com/contact", bio: "Argyle Hair Solutions has been in business for over a decade. Collaborated with the Toupee Queen to design the most natural-looking toupee. Offers all types including custom pieces. 40+ years of combined experience between the lead team.", tags: ["Argyle manufacturer", "Custom systems", "40+ yrs combined exp"] },
+  { name: "Atelier by Land", contact: "Emma Land", city: "Birmingham", state: "AL", ig: "atelier_byland", igurl: "https://www.instagram.com/atelier_byland", website: "http://atelier-by-land-llc.square.site", bio: "4 years licensed, learning 4 years prior. Opened her own business in December 2025 at age 26. Serves both female and male clients with a strong hair system clientele.", tags: ["Female & male", "Lace & poly", "Own studio"] },
+  { name: "Banxstudio", contact: "Angel", city: "Whittier", state: "CA", ig: "Banxstudio", igurl: "https://www.instagram.com/Banxstudio", website: "https://www.banxstudio.com/hair-system-service", bio: "15 years in hair, five years working with hair systems. Experience with all hair system types and hair types. In-depth knowledge of all things hair system.", tags: ["All base types", "All hair types", "15 yrs experience"] },
+  { name: "Bartoli Hair", contact: "Lauren Garlatta", city: "Banning", state: "CA", ig: "bartoli_hair", igurl: "https://www.instagram.com/bartoli_hair", website: "", bio: "Licensed cosmetologist and barber. Offers poly fusion toupees and beard services. Started toupee services in 2025 and brings a full grooming approach to every appointment.", tags: ["Poly fusion", "Barber licensed", "Beard services"] },
+  { name: "Hairline Revival", contact: "Reed Tower", city: "West Hollywood", state: "CA", ig: "HairlineRevival", igurl: "https://www.instagram.com/HairlineRevival", website: "https://www.hairlinerevival.com/", bio: "10+ years specializing in men's hair replacement in West Hollywood. Prides themselves on how natural clients look. Specializes in modern cuts and up-to-date trends — just with a system.", tags: ["Men's replacement", "Modern cuts", "10+ yrs experience"] },
+  { name: "Hardt & Hue Hair Co.", contact: "Meghan Adelhardt", city: "New York", state: "NY", ig: "hardt.hue.hair.co", igurl: "https://www.instagram.com/hardt.hue.hair.co", website: "https://www.hardthue.com", bio: "Working with men and women experiencing hair loss since 2012. Former national trainer for a large toupee company. Truly enjoys helping people become confident again.", tags: ["Men & women", "National trainer", "Since 2012"] },
+  { name: "It's Toupee Time", contact: "Kimberly Hohn", city: "Walnut Creek", state: "CA", ig: "itstoupeetime", igurl: "https://www.instagram.com/itstoupeetime", website: "https://app.acuityscheduling.com/schedule/9efa0555", bio: "Specializes in customizing Argyle toupees. Trained by the Toupee Queen. Dedicated to giving men more options and restoring confidence.", tags: ["Argyle specialist", "Custom toupees", "Toupee Queen trained"] },
+  { name: "JPOETHEBARBER", contact: "Jeremy Poe", city: "Lafayette", state: "IN", ig: "jpoethebarber", igurl: "https://www.instagram.com/jpoethebarber", website: "https://jpoe.booksy.com", bio: "10+ years in the barber industry mastering advanced cutting and blending techniques. Specializes in non-surgical hair replacement with natural blends and realistic hairlines.", tags: ["Non-surgical", "Realistic hairlines", "Barber 10+ yrs"] },
+  { name: "LA Hair Replacement", contact: "Ashly Rae Rojas", city: "Pasadena", state: "CA", ig: "ashlyrae_hair", igurl: "https://www.instagram.com/ashlyrae_hair", website: "https://www.vagaro.com/losangeleshairreplacement", bio: "Specializing in non-surgical hair replacement for men in the greater Los Angeles area.", tags: ["Non-surgical", "Men's specialist", "LA area"] },
+  { name: "Lindsey Newton's Premium Men's Studio", contact: "Lindsey Newton", city: "Knoxville", state: "TN", ig: "Lindseynewtonstudio", igurl: "https://www.instagram.com/Lindseynewtonstudio", website: "https://www.knoxpremiumstudio.com/", bio: "21 years specializing in men's hair with a focus on precision cuts and custom hair systems. Owner of a private salon suite for 6 years, helping clients feel confident, refreshed, and like the best version of themselves.", tags: ["Men's specialist", "Custom hair systems", "21 yrs experience"] },
+  { name: "MB Beauty", contact: "Maddie Woods", city: "Milan", state: "TN", ig: "maddiebeebeauty", igurl: "https://www.instagram.com/maddiebeebeauty", website: "https://www.facebook.com/profile.php?id=100082900356514", bio: "5 years as a stylist, 2.5 years as a non-surgical hair replacement specialist with her own suite. Focused on reaching the younger generation and building their confidence.", tags: ["Non-surgical", "Young clients", "Suite salon"] },
+  { name: "Neon Avenue", contact: "Lauren Richards", city: "Chicago", state: "IL", ig: "lgrdoeshair", igurl: "https://www.instagram.com/lgrdoeshair", website: "https://booksy.com/en-us/918782_lauren-richards_hair-salon_18229_chicago", bio: "Tape-only specialist with 3 years working with hair systems. Works directly with a manufacturer to provide high-quality systems. Stands firmly behind the quality of her work.", tags: ["Tape specialist", "3 yrs experience", "Direct manufacturer"] },
+  { name: "Project Hair Co", contact: "Sara Micallef", city: "Novi", state: "MI", ig: "projecthairco", igurl: "https://www.instagram.com/projecthairco", website: "https://www.projecthairco.com", bio: "Hair replacement experts offering customized solutions inside Salons by JC. Also an educational consulting business offering courses to hairstylists. All stylists have over a decade of experience.", tags: ["Custom solutions", "Education", "10+ yrs experience"] },
+  { name: "Studio 20 by John Scott", contact: "John Mawson", city: "Fort Collins", state: "CO", ig: "johnscotthair", igurl: "https://www.instagram.com/johnscotthair", website: "https://www.studio20byjohnscott.com", bio: "4 years perfecting men's hair replacement, backed by 11+ years in men's grooming. Specializes in ultra-realistic, low-density systems using Ghost Bond Platinum for an invisible, long-lasting bond.", tags: ["Poly base", "Ghost Bond specialist", "Ultra-realistic"] },
+  { name: "The Hair & Toupee Atelier", contact: "Lacee Setters", city: "Lexington", state: "KY", ig: "hairby.laceejo", igurl: "https://www.instagram.com/hairby.laceejo", website: "https://hairandtoupeeateliar.glossgenius.com/", bio: "Argyle systems specialist endorsed by Em the Toupee Queen. 6 years behind the chair specializing in short hair. In-person trained by the Toupee Queen herself.", tags: ["Argyle systems", "Short hair expert", "Toupee Queen trained"] },
+  { name: "The Hair Experience", contact: "Ivette Rios", city: "Phoenix / Pittsburgh", state: "AZ", ig: "barberxrios", igurl: "https://www.instagram.com/barberxrios", website: "https://hairexperience.org", bio: "Founder of The Hair Experience Worldwide. 10+ years barbering, 3 years hair replacement. Specializes in V-Loop and thin skin techniques. Also mentors barbers nationwide on mastering hair replacement.", tags: ["V-Loop", "Thin skin", "National mentor"] },
+  { name: "Thrive Hair Collective", contact: "Taylor Kane", city: "Chicago", state: "IL", ig: "taylor_kane", igurl: "https://www.instagram.com/taylor_kane", website: "https://www.thrivehaircollective.com", bio: "Wearing a hair system since 2021 — which means Taylor brings firsthand insight to every client. Specializes in lace systems and teaches most clients DIY home maintenance, both in-person and through detailed video tutorials.", tags: ["Lace specialist", "DIY training", "Wearer herself"] },
+  { name: "Toupee Chic", contact: "Tina Greer", city: "Wheeling", state: "WV", ig: "toupeechic", igurl: "https://www.instagram.com/toupeechic", website: "https://www.toupeechic.com", bio: "22 years as a professional stylist, now focused solely on men's hair replacement. Trained under the Toupee Queen and completed two additional modern toupee method courses.", tags: ["Men's hair replacement", "22 yrs experience", "Toupee Queen trained"] },
+  { name: "Waves Hair Company", contact: "Carmen Hodges", city: "Morehead City", state: "NC", ig: "wavesandtoupees", igurl: "https://www.instagram.com/wavesandtoupees", website: "https://carmenhodges.glossgenius.com", bio: "NC's only specialist for Toupee Queen's polyurethane systems. 7 years in hair, specializing in men's cuts. Clients travel from across NC and beyond for her work.", tags: ["Poly/skin base", "Men's cuts", "Toupee Queen trained"] }
+];
+
+// ── RENDER SALONS ──
+const grid = document.getElementById('salonsGrid');
+const stateFiltersEl = document.getElementById('stateFilters');
+let activeState = 'All';
+
+function getInitials(name) {
+  return name.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase();
+}
+
+function renderSalons(list) {
+  grid.innerHTML = '';
+  if(list.length === 0) {
+    document.getElementById('noResults').style.display = 'block';
+    return;
+  }
+  document.getElementById('noResults').style.display = 'none';
+  list.forEach((s, i) => {
+    const card = document.createElement('div');
+    card.className = 'salon-card';
+    const salonIndex = salons.indexOf(s);
+    card.onclick = () => openModal(salonIndex);
+    card.innerHTML = `
+      <div class="salon-card-header">
+        <div class="salon-avatar">${getInitials(s.name)}</div>
+        <div>
+          <div class="salon-card-name">${s.name}</div>
+          <div class="salon-card-location">📍 ${s.city}, ${s.state}</div>
+        </div>
+      </div>
+      <div class="salon-verified">✓ Mane Map Verified</div>
+      <div class="salon-bio">${s.bio}</div>
+      <div class="salon-tags">${s.tags.map(t=>`<span class="salon-tag">${t}</span>`).join('')}</div>
+      <div class="salon-card-footer">
+        <span class="salon-book">View Profile →</span>
+        ${s.ig ? `<span class="salon-ig">${s.ig}</span>` : ''}
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+
+function filterSalons() {
+  const q = document.getElementById('salonSearch').value.toLowerCase();
+  const filtered = salons.filter(s => {
+    const matchState = activeState === 'All' || s.state === activeState;
+    const matchQ = !q || s.name.toLowerCase().includes(q) || s.city.toLowerCase().includes(q) || s.state.toLowerCase().includes(q) || s.bio.toLowerCase().includes(q);
+    return matchState && matchQ;
+  });
+  renderSalons(filtered);
+}
+
+// Build state filters
+const states = ['All', ...[...new Set(salons.map(s => s.state))].sort()];
+states.forEach(st => {
+  const btn = document.createElement('button');
+  btn.className = 'filter-btn' + (st==='All'?' active':'');
+  btn.textContent = st;
+  btn.onclick = () => { activeState = st; document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); filterSalons(); };
+  stateFiltersEl.appendChild(btn);
+});
+
+renderSalons(salons);
+
+// ── MODAL ──
+function openModal(i) {
+  const s = salons[i];
+  document.getElementById('modalName').textContent = s.name;
+  document.getElementById('modalLocation').innerHTML = `📍 ${s.city}, ${s.state}`;
+  document.getElementById('modalBio').textContent = s.bio;
+  document.getElementById('modalTags').innerHTML = s.tags.map(t=>`<span class="modal-tag">${t}</span>`).join('');
+  const utm = '?utm_source=manemap&utm_medium=directory&utm_campaign=referral';
+  const utmAmp = '&utm_source=manemap&utm_medium=directory&utm_campaign=referral';
+  let actions = '';
+  actions += `<a href="https://tally.so/r/wzpXA0?salon=${encodeURIComponent(s.name)}&utm_source=manemap&utm_medium=directory&utm_campaign=getmatched" target="_blank" class="modal-btn-primary">Get Matched with ${s.name.split(' ')[0]} →</a>`;
+  if(s.website) actions += `<a href="${s.website}${s.website.includes('?')?utmAmp:utm}" target="_blank" style="display:block;text-align:center;font-size:12px;color:#888;margin-top:8px;text-decoration:none;">Or book directly →</a>`;
+  if(s.igurl) actions += `<a href="${s.igurl}" target="_blank" class="modal-btn-secondary">View on Instagram</a>`;
+  document.getElementById('modalActions').innerHTML = actions;
+  // Add review prompt for returning clients
+  const reviewSection = `<div style="margin-top:12px;padding-top:12px;border-top:1px solid #f0f0f5;">
+    <p style="font-size:12px;color:#888;margin-bottom:8px;">Already visited this salon through Mane Map?</p>
+    <a href="https://tally.so/r/jaWXDE?salon=${encodeURIComponent(s.name)}&utm_source=manemap&utm_medium=modal&utm_campaign=review" target="_blank" style="font-size:12px;color:#1D9E75;font-weight:600;text-decoration:none;">Leave a review → helps other wearers find great specialists</a>
+  </div>`;
+  document.getElementById('modalActions').innerHTML += reviewSection;
+  document.getElementById('salonModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('salonModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── QUIZ ──
+const answers = {};
+
+function selectOpt(btn) {
+  const step = btn.closest('.quiz-step').dataset.step;
+  btn.closest('.quiz-options').querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  answers[step] = btn.dataset.val;
+  document.getElementById(`next${step}`).disabled = false;
+}
+
+function nextStep(current) {
+  document.querySelector(`.quiz-step[data-step="${current}"]`).classList.remove('active');
+  document.querySelector(`.quiz-step[data-step="${current+1}"]`).classList.add('active');
+  document.getElementById('quizProgress').style.width = `${((current+1)/5)*100}%`;
+}
+
+function prevStep(current) {
+  document.querySelector(`.quiz-step[data-step="${current}"]`).classList.remove('active');
+  document.querySelector(`.quiz-step[data-step="${current-1}"]`).classList.add('active');
+  document.getElementById('quizProgress').style.width = `${((current-1)/5)*100}%`;
+}
+
+function showResult() {
+  document.getElementById('quizBody').style.display = 'none';
+  document.getElementById('quizResult').classList.add('active');
+  document.getElementById('quizProgress').style.width = '100%';
+
+  const lifestyle = answers[2], maintenance = answers[3], budget = answers[4], concern = answers[5];
+
+  let baseRec = lifestyle === 'active' ? 'Lace or hybrid base' : 'Thin skin poly';
+  let baseDesc = lifestyle === 'active' 
+    ? 'Breathable mesh base — ideal for sweating and active lifestyles. Lasts 4–5 months with proper care. Perimeter attachment recommended.' 
+    : 'Most natural hairline, but replaces every 2–3 months max. If longevity matters more, a thicker poly (0.06–0.08mm) lasts 4–5 months — same install cost, slightly less exposed hairline. Ask your specialist about an unexposed or partially exposed hairline.';
+
+  let costRange = '';
+  if(maintenance === 'diy') costRange = '$100–$175/month (full DIY — system + materials + haircut)';
+  else if(maintenance === 'partial') costRange = '$155–$250/month (mixed route — DIY between salon visits)';
+  else costRange = '$250–$362/month (full salon route)';
+
+  let year1 = maintenance === 'fullsalon' ? '$5,500–$6,700' : '$4,500–$5,500';
+
+  const concernResponses = {
+    natural: 'When it\'s fitted and cut-in properly, it\'s genuinely undetectable. The first 1–2 weeks are an adjustment — then most people forget it\'s not theirs.',
+    cost: 'Year one is the most expensive. After that, ongoing costs drop significantly. Most wearers settle into $150–$200/month once they find their routine — and that includes subtracting what you were already spending on haircuts.',
+    judgment: 'Here\'s the reality: most people won\'t think anything other than "damn, your hair looks great." The most common reaction is that people assume you grew it out or changed your style. You\'ll get more compliments than questions — and the ones who do find out usually just wish they\'d done it sooner.',
+    maintenance: `The ${maintenance === 'diy' ? 'DIY route gets to about 1.5 hours per session by month 6 (shower included) — and that\'s a full removal, clean, and reattach' : 'salon route means you barely need to think about maintenance at all'}. The learning curve is real but short. It gets easier fast.`
+  };
+
+  document.getElementById('resultTitle').textContent = `You\'re more ready than you think.`;
+  document.getElementById('resultSummary').textContent = concernResponses[concern] || 'You\'re in the right place. The journey is manageable — and Mane Map is here for every step.';
+  const baseCaveat = lifestyle === 'active' 
+    ? 'Lasts 4–5 months' 
+    : 'Thin skin: 2–3 months. Thicker poly: 4–5 months.';
+  const costCaveat = maintenance === 'diy' 
+    ? '~$350/system every 3–6 months + adhesive/products (~$25/mo) + monthly haircut (~$25). No salon needed.' 
+    : 'Based on thin skin poly replaced every 3 months (~$600 at salon). Thicker base or lace may reduce frequency.';
+  document.getElementById('resultCards').innerHTML = `
+    <div class="result-card"><div class="result-card-label">Recommended base</div><div class="result-card-val">${baseRec}</div><div style="font-size:11px;color:#888;margin-top:4px">${baseCaveat}</div></div>
+    <div class="result-card"><div class="result-card-label">Est. monthly cost</div><div class="result-card-val">${costRange}</div><div style="font-size:11px;color:#888;margin-top:4px">${costCaveat}</div></div>
+    <div class="result-card"><div class="result-card-label">Year 1 total</div><div class="result-card-val">${year1}</div></div>
+    <div class="result-card"><div class="result-card-label">Maintenance style</div><div class="result-card-val">${maintenance === 'diy' ? 'Full DIY — no salon' : maintenance === 'partial' ? 'Mixed — salon installs, you maintain' : 'Full salon — every visit'}</div></div>`;
+}
+
+function handleAIWaitlist(btn) {
+  const input = btn.previousElementSibling;
+  const email = input.value.trim();
+  if(!email || !email.includes('@')) {
+    input.style.borderColor = '#E24B4A';
+    setTimeout(() => input.style.borderColor = '#e8e8f0', 2000);
+    return;
+  }
+  btn.textContent = "You're on the list!";
+  btn.style.background = '#085041';
+  btn.disabled = true;
+  input.disabled = true;
+  input.value = email;
+}
+
+function restartQuiz() {
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.querySelector('.quiz-step[data-step="1"]').classList.add('active');
+  document.querySelectorAll('.quiz-opt').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('.quiz-next').forEach(b => b.disabled = true);
+  document.getElementById('quizProgress').style.width = '20%';
+  document.getElementById('quizResult').classList.remove('active');
+  document.getElementById('quizBody').style.display = 'block';
+}
+</script>
+</body>
+</html>
