@@ -1020,9 +1020,9 @@ function openModal(i) {
   const utm = '?utm_source=manemap&utm_medium=directory&utm_campaign=referral';
   const utmAmp = '&utm_source=manemap&utm_medium=directory&utm_campaign=referral';
   let actions = '';
-  actions += `<a href="https://tally.so/r/wzpXA0?salon=${encodeURIComponent(s.name)}&utm_source=manemap&utm_medium=directory&utm_campaign=getmatched" target="_blank" class="modal-btn-primary">Connect with ${s.name.split(' ')[0]} →</a>`;
-  if(s.website) actions += `<a href="${s.website}${s.website.includes('?')?utmAmp:utm}" target="_blank" style="display:block;text-align:center;font-size:12px;color:#888;margin-top:8px;text-decoration:none;">Or book directly →</a>`;
-  if(s.igurl) actions += `<a href="${s.igurl}" target="_blank" class="modal-btn-secondary">View on Instagram</a>`;
+  if(s.website) actions += `<a href="${s.website}${s.website.includes('?')?utmAmp:utm}" target="_blank" class="modal-btn-primary" onclick="trackBookingClick('${s.name}')">Book with ${s.name.split(' ')[0]} →</a>`;
+  if(!s.website) actions += `<a href="${s.igurl}" target="_blank" class="modal-btn-primary">View on Instagram →</a>`;
+  if(s.igurl && s.website) actions += `<a href="${s.igurl}" target="_blank" class="modal-btn-secondary">View on Instagram</a>`;
   document.getElementById('modalActions').innerHTML = actions;
   // Add review prompt for returning clients
   const reviewSection = `<div style="margin-top:12px;padding-top:12px;border-top:1px solid #f0f0f5;">
@@ -1125,6 +1125,16 @@ function restartQuiz() {
   document.getElementById('quizProgress').style.width = '20%';
   document.getElementById('quizResult').classList.remove('active');
   document.getElementById('quizBody').style.display = 'block';
+}
+
+function trackBookingClick(salonName) {
+  if(typeof gtag !== 'undefined') {
+    gtag('event', 'booking_click', {
+      'event_category': 'outbound',
+      'event_label': salonName,
+      'salon_name': salonName
+    });
+  }
 }
 </script>
 </body>
