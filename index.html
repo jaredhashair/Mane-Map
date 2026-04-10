@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+  <meta name="description" content="ManeMap connects hair system wearers with verified specialists across the US. Take the free readiness quiz, get matched with a pre-screened specialist in your area, and walk into your first appointment confident.">
+  <link rel="icon" type="image/png" href="https://i.imgur.com/m0PbIsa.png">
+  <link rel="apple-touch-icon" href="https://i.imgur.com/m0PbIsa.png">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BHLXZM72F"></script>
   <script>
@@ -404,20 +407,17 @@ footer {
 <section class="hero">
   <img src="https://i.imgur.com/Yvy8GSl.png" alt="Mane Map" style="height:72px;width:auto;border-radius:14px;margin-bottom:1rem;">
   <div style="font-size:12px;font-weight:700;color:#1DC8C8;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Because bald is NOT a hairstyle</div>
-  <div class="hero-eyebrow">Verified specialists only</div>
+  <div style="font-size:12px;color:rgba(255,255,255,0.6);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.25rem;">Verified Specialists Only</div>
   <h1>The smarter way to find your <em>hair system specialist</em></h1>
   <p class="hero-sub">
-    Most guys spend months researching hair systems online and still walk into their first appointment 
-    unprepared. <strong>Mane Map changes that.</strong> Verified specialists. Real client education. Walk in confident.
+    Most guys spend months researching hair systems online and still walk into their first appointment unprepared. <strong>Mane Map changes that.</strong>
+  </p>
+  <p class="hero-sub" style="margin-top:0.5rem;">
+    Verified specialists. Real client education. Show up knowing exactly what you're walking into.
   </p>
   <div class="hero-actions">
     <a href="#quiz" class="btn-primary">Take the Readiness Quiz →</a>
     <a href="#specialists" class="btn-secondary">Browse Specialists</a>
-  </div>
-  <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.08);max-width:480px;margin-left:auto;margin-right:auto;text-align:center;">
-    <p style="color:#888;font-size:13px;margin:0 0 0.75rem;">Not ready for the quiz yet? Get the free hair system guide.</p>
-    <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=hero&utm_campaign=lead_capture" target="_blank" style="display:inline-flex;align-items:center;background:#1DC8C8;color:#141420;text-decoration:none;padding:10px 22px;border-radius:100px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;">Get the free guide →</a>
-    <p style="color:#444;font-size:11px;margin:8px 0 0;">No spam. Unsubscribe anytime.</p>
   </div>
   <div class="hero-stats">
     <div class="hero-stat">
@@ -433,6 +433,9 @@ footer {
       <div class="hero-stat-label">Clients matched</div>
     </div>
   </div>
+  <div style="margin-top:2rem;text-align:center;">
+    <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=hero&utm_campaign=lead_capture" target="_blank" style="color:white;font-size:13px;text-decoration:none;">Not ready? <span style="text-decoration:underline;text-underline-offset:3px;">Download the free hair system guide →</span></a>
+  </div>
 </section>
 
 <!-- QUIZ -->
@@ -440,7 +443,7 @@ footer {
   <div class="section-inner">
     <div class="section-eyebrow">Get Started</div>
     <h2 class="section-title">Are you ready for a hair system?</h2>
-    <p class="section-sub" style="text-align:center;max-width:560px;margin:0 auto;">5 quick questions. We'll tell you exactly what to expect — costs, base type, and what to say at your first consultation.</p>
+    <p class="section-sub" style="text-align:center;max-width:560px;margin:0 auto;">5 questions. Total clarity on your base type, real costs, and exactly what to say when you walk in.</p>
 
     <div class="quiz-card">
       <div class="quiz-progress">
@@ -475,7 +478,7 @@ footer {
         <!-- Step 2 -->
         <div class="quiz-step" data-step="2">
           <div class="quiz-q">What's your lifestyle like?</div>
-          <div class="quiz-hint">This determines which base type works best for you.</div>
+          <div class="quiz-hint">This determines your maintenance route and monthly cost estimate.</div>
           <div class="quiz-options">
             <button class="quiz-opt" data-val="active" onclick="selectOpt(this)">
               <span class="quiz-opt-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 9h2M14 9h2M4 9h10M4 6v6M14 6v6M6 7.5v3M12 7.5v3" stroke="#888" stroke-width="1.5" stroke-linecap="round"/></svg></span> Very active — gym, sports, sweating regularly
@@ -569,16 +572,9 @@ footer {
         <div class="result-title" id="resultTitle">Loading your results...</div>
         <div class="result-summary" id="resultSummary"></div>
         <div class="result-cards" id="resultCards"></div>
-        <a href="https://tally.so/r/wzpXA0?utm_source=manemap&utm_medium=quiz&utm_campaign=getmatched" target="_blank" class="btn-primary" style="display:inline-flex;margin-bottom:1rem">Get Matched with a Specialist →</a>
-        <p style="font-size:12px;color:#888;margin-bottom:0.75rem;">We'll connect you with the right specialist in your area based on your answers.</p>
-        <a href="#specialists" style="font-size:13px;color:var(--teal);text-decoration:none;" onclick="document.getElementById('quizResult').style.display='none';document.getElementById('quizBody').style.display='block'">Or browse the full directory →</a>
-        <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid #eee;text-align:left;">
-          <p style="font-size:13px;font-weight:700;color:#141420;margin:0 0 0.5rem;">Before your appointment, read this:</p>
-          <a href="#education" style="font-size:13px;color:var(--teal);text-decoration:none;display:flex;align-items:center;gap:6px;">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7 3l4 4-4 4" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            What to expect, what to ask, and what maintenance looks like →
-          </a>
-        </div>
+        <a href="#education" class="btn-primary" style="display:inline-flex;margin-bottom:1rem;" onclick="setTimeout(()=>document.getElementById('education').scrollIntoView({behavior:'smooth'}),100)">Read This Before You Book →</a>
+        <p style="font-size:12px;color:#888;margin-bottom:0.75rem;">Base types, what to expect, questions to ask — then find your specialist.</p>
+        <a href="#specialists" style="font-size:13px;color:var(--teal);text-decoration:none;" onclick="document.getElementById('quizResult').style.display='none';document.getElementById('quizBody').style.display='block'">Or skip ahead to the directory →</a>
         <br>
         <button onclick="restartQuiz()" style="background:none;border:none;color:var(--text-muted);font-size:13px;cursor:pointer;font-family:'DM Sans',sans-serif;">Retake quiz</button>
       </div>
@@ -591,10 +587,10 @@ footer {
 <section id="education" style="background:#f7f7f5;padding:5rem 1.5rem;">
   <div style="max-width:960px;margin:0 auto;">
 
-    <div style="text-align:center;margin-bottom:3rem;">
+    <div style="margin-bottom:3rem;">
       <div class="section-eyebrow">Before Your Appointment</div>
-      <h2 class="section-title">Know before you go.</h2>
-      <p class="section-sub" style="max-width:580px;margin:0 auto;">Most guys walk into their first consultation not knowing what to ask. Here's what you need to know beforehand — so you show up like you've done this before.</p>
+      <h2 class="section-title" style="text-align:center;">Know before you go.</h2>
+      <p class="section-sub" style="text-align:center;max-width:580px;margin:0 auto;">Most guys walk into their first consultation not knowing what to ask. Here's what you need to know beforehand — so you show up like you've done this before.</p>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:1.25rem;">
@@ -614,14 +610,14 @@ footer {
           </div>
           <div style="background:#f7f7f5;border-radius:10px;padding:1rem;">
             <div style="font-weight:700;font-size:13px;color:#141420;margin-bottom:6px;">Thicker Poly (0.06–0.08mm)</div>
-            <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">Best for obscured or partially exposed hairlines — forward, tousled, messy styles. Slightly more visible edge, hidden naturally by your hairstyle. Lasts 4–5 months.</p>
+            <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">Best for obscured or partially exposed hairlines — forward, tousled, messy styles. Slightly less visible edge. Lasts 4–5 months.</p>
           </div>
           <div style="background:#f7f7f5;border-radius:10px;padding:1rem;">
             <div style="font-weight:700;font-size:13px;color:#141420;margin-bottom:6px;">Lace / Hybrid</div>
             <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">Most breathable and comfortable. Best for active lifestyles and heavy sweaters. Lasts 4–5 months. Requires more careful maintenance than poly.</p>
           </div>
         </div>
-        <p style="font-size:12px;color:#1DC8C8;font-weight:700;margin:1rem 0 0;">Active + heavy sweater → lace or hybrid &nbsp;·&nbsp; Exposed hairline style → thin skin poly &nbsp;·&nbsp; Obscured style → thicker poly</p>
+        <p style="font-size:12px;color:#1DC8C8;font-weight:700;margin:1rem 0 0;">Exposed hairline style → thin skin poly &nbsp;·&nbsp; Obscured/messy style → thicker poly &nbsp;·&nbsp; Active + heavy sweater → lace or hybrid</p>
       </div>
 
       <!-- Row of 3 shorter cards -->
@@ -648,7 +644,7 @@ footer {
             <h3 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#141420;margin:0;">Week one reality check</h3>
           </div>
           <p style="font-size:13px;color:#666;line-height:1.65;margin:0 0 0.75rem;">The first week is the hardest — not physically, just mentally. You'll check the mirror constantly. You'll wonder if people can tell. They can't.</p>
-          <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">By week two most guys just see their hair. The guys who struggle longest walked in without realistic expectations. Now you have them.</p>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0;">By week two most guys just see their hair. The guys who struggle the longest walked in without realistic expectations. But that won't be you.</p>
         </div>
 
         <!-- Card 4 - Maintenance -->
@@ -659,8 +655,8 @@ footer {
             </div>
             <h3 style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:#141420;margin:0;">What maintenance looks like</h3>
           </div>
-          <p style="font-size:13px;color:#666;line-height:1.65;margin:0 0 0.75rem;"><strong style="color:#141420;">Partial DIY</strong> — salon installs your new system, you maintain at home every 10–14 days. Each session involves removing the system, cleaning old adhesive from the base and scalp, prepping the scalp, and re-adhering with your preferred adhesive. About 1.5 hours including the shower. Muscle memory by month three.</p>
-          <p style="font-size:13px;color:#666;line-height:1.65;margin:0;"><strong style="color:#141420;">Full salon</strong> — they handle everything, every visit. Simpler, costs more. Worth it for a lot of guys.</p>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0 0 0.75rem;"><strong style="color:#141420;">Partial DIY</strong> — Salon installs your new system, you maintain at home every 10–14 days. Each session: remove the system, clean old adhesive from base and scalp, prep the scalp, re-adhere with your preferred adhesive. About 1.5 hours including the shower. Muscle memory by month three.</p>
+          <p style="font-size:13px;color:#666;line-height:1.65;margin:0;"><strong style="color:#141420;">Full Salon</strong> — They handle everything, every visit. Simpler, costs more. A lot of guys find it worth the extra cost.</p>
         </div>
 
       </div>
@@ -674,12 +670,12 @@ footer {
           <h3 style="font-family:'Syne',sans-serif;font-size:17px;font-weight:800;color:white;margin:0;">Questions to ask at your first appointment</h3>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.75rem;">
-          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What bases do you specialize in?</span></div>
-          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What adhesive do you use and why?</span></div>
-          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">Do you work with systems clients bring in?</span></div>
-          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What does the maintenance schedule look like?</span></div>
-          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">Can you walk me through home maintenance?</span></div>
-          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:1px;">→</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What's the realistic replacement timeline?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:2px;font-size:16px;">•</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What bases do you specialize in?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:2px;font-size:16px;">•</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What adhesive do you use and why?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:2px;font-size:16px;">•</span><span style="font-size:13px;color:#ccc;line-height:1.5;">Can I bring in my own hair system?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:2px;font-size:16px;">•</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What does the maintenance schedule look like?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:2px;font-size:16px;">•</span><span style="font-size:13px;color:#ccc;line-height:1.5;">Can you walk me through home maintenance?</span></div>
+          <div style="display:flex;align-items:flex-start;gap:8px;"><span style="color:#1DC8C8;font-weight:700;margin-top:2px;font-size:16px;">•</span><span style="font-size:13px;color:#ccc;line-height:1.5;">What's the realistic replacement timeline?</span></div>
         </div>
         <p style="font-size:12px;color:#1DC8C8;font-weight:700;margin:1.25rem 0 0;">A specialist who welcomes these questions is the right one.</p>
       </div>
@@ -687,6 +683,84 @@ footer {
     </div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section style="background:#fff;padding:5rem 1.5rem;" id="faq">
+  <div style="max-width:720px;margin:0 auto;">
+    <div style="margin-bottom:3rem;">
+      <div class="section-eyebrow">Common Questions</div>
+      <h2 class="section-title" style="text-align:center;">Real answers, no fluff.</h2>
+      <p class="section-sub" style="text-align:center;max-width:500px;margin:0 auto;">The questions every first-timer has. Answered straight.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:0;">
+
+      <div class="faq-item" style="border-top:1px solid #e8e8f0;">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;background:none;border:none;cursor:pointer;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#141420;text-align:left;">
+          Can you swim?
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex-shrink:0;transition:transform 0.2s;"><path d="M4 6l5 5 5-5" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body" style="display:none;padding-bottom:1.25rem;">
+          <p style="font-size:14px;color:#555;line-height:1.7;margin:0;">Yes, just wait 24-48 hours after installation for the bond to fully cure first. After that, swimming is fine. Rinse with fresh water immediately after getting out — salt water and chlorine won't pull the system off but they will fade the hair over time. Shampoo and condition after every swim and you're good.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-top:1px solid #e8e8f0;">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;background:none;border:none;cursor:pointer;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#141420;text-align:left;">
+          Does it itch?
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex-shrink:0;transition:transform 0.2s;"><path d="M4 6l5 5 5-5" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body" style="display:none;padding-bottom:1.25rem;">
+          <p style="font-size:14px;color:#555;line-height:1.7;margin:0;">The occasional itch is totally normal, especially in the first couple of weeks as your scalp adjusts. Most guys get to a point where they don't even know it's there. You may notice more itching when your body heat rises during exercise or when it's time for a removal and clean — that's just your scalp's way of telling you it's ready. For context, most guys say they itched way more in hats.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-top:1px solid #e8e8f0;">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;background:none;border:none;cursor:pointer;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#141420;text-align:left;">
+          Can you wear a hat?
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex-shrink:0;transition:transform 0.2s;"><path d="M4 6l5 5 5-5" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body" style="display:none;padding-bottom:1.25rem;">
+          <p style="font-size:14px;color:#555;line-height:1.7;margin:0;">Completely fine. Hats, beanies, helmets — no issues. The only thing to watch is very tight-fitting hats worn for extended periods can put pressure on the bond over time. Normal everyday hat wearing is a non-issue.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-top:1px solid #e8e8f0;">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;background:none;border:none;cursor:pointer;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#141420;text-align:left;">
+          What about wind?
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex-shrink:0;transition:transform 0.2s;"><path d="M4 6l5 5 5-5" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body" style="display:none;padding-bottom:1.25rem;">
+          <p style="font-size:14px;color:#555;line-height:1.7;margin:0;">A properly bonded system doesn't move in wind. If it's lifting or shifting in wind, the bond needs to be redone. A good installation should feel completely secure regardless of weather.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="border-top:1px solid #e8e8f0;border-bottom:1px solid #e8e8f0;">
+        <button onclick="toggleFaq(this)" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;background:none;border:none;cursor:pointer;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#141420;text-align:left;">
+          What happens when you sweat?
+          <svg class="faq-arrow" width="18" height="18" viewBox="0 0 18 18" fill="none" style="flex-shrink:0;transition:transform 0.2s;"><path d="M4 6l5 5 5-5" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="faq-body" style="display:none;padding-bottom:1.25rem;">
+          <p style="font-size:14px;color:#555;line-height:1.7;margin:0;">Sweat itself isn't the main issue — heat is. As your body temperature rises, the adhesive can soften slightly, which means you want to avoid being too rough with the system right after an intense workout until things cool back down. Once it does, the bond is just as strong as before. Even when warm, it's still very secure — it's not going to come off. Lace and hybrid bases are more breathable and handle heat better than poly, which is why they're recommended for active guys or anyone who runs hot.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="#specialists" style="display:inline-flex;align-items:center;gap:8px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Ready? Find your specialist →</a>
+    </div>
+  </div>
+</section>
+
+<script>
+function toggleFaq(btn) {
+  const body = btn.nextElementSibling;
+  const arrow = btn.querySelector('.faq-arrow');
+  const isOpen = body.style.display === 'block';
+  body.style.display = isOpen ? 'none' : 'block';
+  arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+}
+</script>
 
 <!-- SPECIALISTS -->
 <section class="salons-section" id="specialists">
@@ -705,8 +779,8 @@ footer {
 <section class="how-section" id="how">
   <div class="section-inner">
     <div class="section-eyebrow" style="color:var(--teal)">The process</div>
-    <h2 class="section-title">From overwhelmed to walking in ready</h2>
-    <p class="section-sub" style="color:var(--text-light)">Most guys spend weeks feeling lost before their first appointment. Here's the path that changes that.</p>
+    <h2 class="section-title" style="text-align:center;">From overwhelmed to walking in ready</h2>
+    <p class="section-sub" style="color:var(--text-light);text-align:center;max-width:560px;margin:0 auto 2rem;">Most guys spend weeks feeling lost before their first appointment. Here's the path that changes that.</p>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">Step 01</div>
@@ -723,14 +797,14 @@ footer {
       <div class="step-card">
         <div class="step-num">Step 03</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 14l4 4 6-8M14 18l5-5 5 3" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="22" cy="8" r="3" stroke="#1DC8C8" stroke-width="1.5"/></svg></div>
-        <div class="step-title">Book educated</div>
-        <div class="step-desc">Arrive knowing what base type suits your lifestyle, what to realistically budget (every salon prices differently — we give you ranges, not guarantees), and exactly what to ask. Walk in confident, not overwhelmed.</div>
+        <div class="step-title">Arrive Ready</div>
+        <div class="step-desc">Arrive knowing what base type suits your lifestyle, what to realistically budget (every salon prices differently, we give you ranges not guarantees), and exactly what to ask. Show up prepared, not overwhelmed.</div>
       </div>
       <div class="step-card">
         <div class="step-num">Step 04</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 6h20v14a2 2 0 0 1-2 2H8l-4 3V6z" stroke="#1DC8C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12h10M9 16h6" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
         <div class="step-title">Ask anything, anytime</div>
-        <div class="step-desc">Hair system questions don't keep business hours. ManeMap AI is there at 11pm when you notice something weird and just need a straight answer.</div>
+        <div class="step-desc"><a href="#chat" style="color:#1DC8C8;text-decoration:none;font-weight:600;">ManeMap AI</a> is there when you notice something weird at 11pm and just need a straight answer — no judgment, no waiting rooms.</div>
       </div>
     </div>
   </div>
@@ -761,7 +835,12 @@ footer {
       </div>
     </div>
   </div>
+    <div style="text-align:center;margin-top:2.5rem;">
+      <a href="#faq" style="display:inline-flex;align-items:center;gap:8px;background:#141420;color:white;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Got questions? Read these → </a>
+    </div>
+  </div>
 </section>
+
 
 <!-- FOR SALONS -->
 <section class="salons-pitch" id="for-salons">
@@ -769,8 +848,8 @@ footer {
     <div class="pitch-grid">
       <div>
         <div class="section-eyebrow">For Specialists</div>
-        <h2 class="section-title">Your clients arrive educated. You focus on the work.</h2>
-        <p class="section-sub" style="margin-bottom:2rem">Mane Map sends you clients who already know their budget, understand the basics, and are ready to book — not clients who need a 45-minute education session first.</p>
+        <h2 class="section-title">Skip hours of<br>client questions.<br><span style="color:#1DC8C8;">Get chair-ready leads.</span></h2>
+        <p class="section-sub" style="margin-bottom:2rem">Mane Map sends you qualified hair system clients who already understand costs, base types, and what to expect. Less time in consultation mode, more time on the work that actually grows your revenue.</p>
         <div class="pitch-features">
           <div class="pitch-feature">
             <div class="pitch-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#1DC8C8" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
@@ -941,7 +1020,7 @@ function openModal(i) {
   const utm = '?utm_source=manemap&utm_medium=directory&utm_campaign=referral';
   const utmAmp = '&utm_source=manemap&utm_medium=directory&utm_campaign=referral';
   let actions = '';
-  actions += `<a href="https://tally.so/r/wzpXA0?salon=${encodeURIComponent(s.name)}&utm_source=manemap&utm_medium=directory&utm_campaign=getmatched" target="_blank" class="modal-btn-primary">Get Matched with ${s.name.split(' ')[0]} →</a>`;
+  actions += `<a href="https://tally.so/r/wzpXA0?salon=${encodeURIComponent(s.name)}&utm_source=manemap&utm_medium=directory&utm_campaign=getmatched" target="_blank" class="modal-btn-primary">Connect with ${s.name.split(' ')[0]} →</a>`;
   if(s.website) actions += `<a href="${s.website}${s.website.includes('?')?utmAmp:utm}" target="_blank" style="display:block;text-align:center;font-size:12px;color:#888;margin-top:8px;text-decoration:none;">Or book directly →</a>`;
   if(s.igurl) actions += `<a href="${s.igurl}" target="_blank" class="modal-btn-secondary">View on Instagram</a>`;
   document.getElementById('modalActions').innerHTML = actions;
