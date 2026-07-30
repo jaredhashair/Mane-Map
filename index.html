@@ -244,8 +244,7 @@ section { padding: 80px 2rem; }
 .salon-tag { font-size: 11px; padding: 3px 10px; border-radius: 100px; background: #f3f3fa; color: #555566; font-weight: 500; }
 .salon-card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid #f0f0f5; }
 .salon-book { font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; display: flex; align-items: center; gap: 4px; }
-.salon-ig { font-size: 12px; color: var(--text-muted); text-decoration: none; }
-.salon-ig:hover { color: var(--charcoal); }
+.salon-ig { font-size: 12px; color: var(--text-muted); text-decoration: none; pointer-events: none; }
 .no-results { text-align: center; padding: 3rem; color: var(--text-muted); font-size: 15px; display: none; }
 
 /* ── HOW IT WORKS ── */
@@ -397,6 +396,7 @@ footer {
   <div class="nav-links">
     <a href="#quiz">Get Started</a>
     <a href="#specialists">Find a Specialist</a>
+    <a href="#faq">FAQ</a>
     <a href="#how">How It Works</a>
     <a href="#for-salons">For Salons</a>
   </div>
@@ -405,7 +405,6 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-  <img src="https://i.imgur.com/Yvy8GSl.png" alt="Mane Map" style="height:72px;width:auto;border-radius:14px;margin-bottom:1rem;">
   <div style="font-size:12px;font-weight:700;color:#1DC8C8;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.75rem;">Because bald is NOT a hairstyle</div>
   <div style="font-size:12px;color:rgba(255,255,255,0.6);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.25rem;">Verified Specialists Only</div>
   <h1>The smarter way to find your <em>hair system specialist</em></h1>
@@ -434,7 +433,8 @@ footer {
     </div>
   </div>
   <div style="margin-top:2rem;text-align:center;">
-    <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=hero&utm_campaign=lead_capture" target="_blank" style="color:white;font-size:13px;text-decoration:none;">Not ready? <span style="text-decoration:underline;text-underline-offset:3px;">Download the free hair system guide →</span></a>
+    <p style="color:var(--text-light);font-size:13px;margin-bottom:10px;">Not ready to book yet?</p>
+    <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=hero&utm_campaign=lead_capture" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Download the free Starter Guide →</a>
   </div>
 </section>
 
@@ -941,8 +941,8 @@ const salons = [
   { name: "Aceoffades 212 Hair Replacement", slug: "aceoffades-212-hair-replacement", contact: "Marcos", city: "New York City", state: "NY", ig: "aceoffades212_", igurl: "https://www.instagram.com/aceoffades212_/", website: "https://aceoffades.com", bio: "Handles straight, afro, and curly hair systems. Clients can bring their own system. 8+ years in the industry with a focus on customer satisfaction from service to aftercare instructions.", tags: ["All textures", "BYO system ok", "8+ yrs experience"] },
   { name: "Apex Hair Systems", slug: "apex-hair-systems", contact: "Benjamin Medina", city: "Macon", state: "GA", ig: "benjamin_barber_", igurl: "https://www.instagram.com/benjamin_barber_", website: "https://apexhairsystems.com", bio: "9-year barber with 1 year dedicated to hair systems. Passionate about the life-changing before and after results that hair systems deliver for clients.", tags: ["Hair systems", "Barber background", "Before & after specialist"] },
   { name: "April T.", slug: "april-t", contact: "April Telman", city: "Chicago", state: "IL", ig: "aprilt.ailoredhair", igurl: "https://www.instagram.com/aprilt.ailoredhair", website: "https://salonlofts.com/april_telman/schedule", bio: "20+ years in the hair industry. Has perfected the hairline to give the most realistic and natural look so clients feel the most confident after getting their hair system.", tags: ["Hairline specialist", "Natural look", "20+ yrs experience"] },
-  { name: "Argyle Hair Solutions", slug: "argyle-hair-solutions", contact: "Rochelle", city: "Bountiful", state: "UT", ig: "toupeesbyargyle", igurl: "https://www.instagram.com/toupeesbyargyle", website: "https://argylehairsolutions.com/contact", bio: "Argyle Hair Solutions has been in business for over a decade. Collaborated with the Toupee Queen to design the most natural-looking toupee. Offers all types including custom pieces. 40+ years of combined experience between the lead team.", tags: ["Argyle manufacturer", "Custom systems", "40+ yrs combined exp"] },
-  { name: "Atelier by Land", slug: "atelier-by-land", contact: "Emma Land", city: "Birmingham", state: "AL", ig: "atelier_byland", igurl: "https://www.instagram.com/atelier_byland", website: "https://atelierbyland.com", bio: "4 years licensed, learning 4 years prior. Opened her own business in December 2025 at age 26. Serves both female and male clients with a strong hair system clientele.", tags: ["Female & male", "Lace & poly", "Own studio"] },
+  { name: "Argyle Hair Solutions", slug: "argyle-hair-solutions", contact: "Rochelle", city: "Bountiful", state: "UT", ig: "toupeesbyargyle", igurl: "https://www.instagram.com/toupeesbyargyle", website: "https://argylehairsolutions.com/contact", bio: "Argyle Hair Solutions has been in business for over a decade. Collaborated with the Toupee Queen to design the most natural-looking toupee. Offers all types including custom pieces. 40+ years of combined experience between the lead team.", tags: ["Argyle manufacturer", "Custom systems", "40+ yrs combined exp"], paid: true },
+  { name: "Atelier by Land", slug: "atelier-by-land", contact: "Emma Land", city: "Birmingham", state: "AL", ig: "atelier_byland", igurl: "https://www.instagram.com/atelier_byland", website: "https://atelierbyland.com", bio: "4 years licensed, learning 4 years prior. Opened her own business in December 2025 at age 26. Serves both female and male clients with a strong hair system clientele.", tags: ["Female & male", "Lace & poly", "Own studio"], paid: true },
   { name: "Banxstudio", slug: "banxstudio", contact: "Angel", city: "Whittier", state: "CA", ig: "Banxstudio", igurl: "https://www.instagram.com/Banxstudio", website: "https://www.banxstudio.com/hair-system-service", bio: "15 years in hair, five years working with hair systems. Experience with all hair system types and hair types. In-depth knowledge of all things hair system.", tags: ["All base types", "All hair types", "15 yrs experience"] },
   { name: "Bartoli Hair", slug: "bartoli-hair", contact: "Lauren Garlatta", city: "Banning", state: "CA", ig: "bartoli_hair", igurl: "https://www.instagram.com/bartoli_hair", website: "", bio: "Licensed cosmetologist and barber. Offers poly fusion toupees and beard services. Started toupee services in 2025 and brings a full grooming approach to every appointment.", tags: ["Poly fusion", "Barber licensed", "Beard services"] },
   { name: "Hair by Lindsay", slug: "hair-by-lindsay", contact: "Lindsay Cole", city: "Columbus", state: "OH", ig: "Hairbylindsaycole", igurl: "https://www.instagram.com/Hairbylindsaycole", website: "https://square.site/book/JVHBV7KT494S1/hair-by-lindsay-cole-westerville-oh", bio: "20 years in hair, trained by the Toupee Queen, and has been doing men's toupees for a year. Brings decades of styling expertise to every hair system appointment.", tags: ["Toupee Queen trained", "20 yrs experience", "Men's toupees"] },
@@ -974,7 +974,12 @@ const stateFiltersEl = document.getElementById('stateFilters');
 let activeState = 'All';
 
 function getInitials(name) {
-  return name.split(' ').map(w => w[0]).join('').substring(0,2).toUpperCase();
+  const stopwords = new Set(['by','the','of','and','&','a','an','for','at','in']);
+  const words = name.split(' ').filter(w => w.length > 0);
+  const significant = words.filter(w => !stopwords.has(w.toLowerCase()) && /[a-zA-Z]/.test(w[0]));
+  const source = significant.length >= 2 ? significant : words;
+  if (source.length === 1) return source[0].substring(0,2).toUpperCase();
+  return source.slice(0,2).map(w => w[0]).join('').toUpperCase();
 }
 
 function renderSalons(list) {
@@ -1001,7 +1006,7 @@ function renderSalons(list) {
       <div class="salon-tags">${s.tags.map(t=>`<span class="salon-tag">${t}</span>`).join('')}</div>
       <div class="salon-card-footer">
         <span class="salon-book">View Profile →</span>
-        ${s.ig ? `<span class="salon-ig">${s.ig}</span>` : ''}
+        ${s.paid && s.ig ? `<span class="salon-ig">${s.ig}</span>` : ''}
       </div>`;
     grid.appendChild(card);
   });
