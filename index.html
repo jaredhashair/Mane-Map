@@ -267,40 +267,6 @@ section { padding: 80px 2rem; }
 .step-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: white; margin-bottom: 0.5rem; }
 .step-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
 
-/* ── CHATBOT ── */
-.chat-section { background: var(--off-white); }
-.chat-wrapper {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;
-  align-items: center; margin-top: 3rem;
-}
-.chat-copy .section-title { margin-bottom: 1rem; }
-.chat-copy p { font-size: 16px; color: #555566; line-height: 1.7; margin-bottom: 1.5rem; }
-.chat-demo {
-  background: white; border-radius: 20px;
-  border: 1.5px solid #e8e8f0;
-  box-shadow: var(--card-shadow); overflow: hidden;
-}
-.chat-demo-header {
-  background: var(--charcoal); padding: 14px 18px;
-  display: flex; align-items: center; gap: 10px;
-}
-.chat-demo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
-.chat-demo-title { font-size: 13px; font-weight: 600; color: white; }
-.chat-demo-status { font-size: 11px; color: var(--teal); margin-left: auto; }
-.chat-messages { padding: 1.25rem; display: flex; flex-direction: column; gap: 12px; min-height: 260px; }
-.chat-msg { display: flex; gap: 8px; max-width: 88%; }
-.chat-msg.bot { align-self: flex-start; }
-.chat-msg.user { align-self: flex-end; flex-direction: row-reverse; }
-.chat-av { width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; margin-top: 2px; }
-.bot .chat-av { background: var(--teal); color: var(--charcoal); }
-.user .chat-av { background: #eee; color: #666; }
-.chat-bubble { padding: 10px 14px; border-radius: 14px; font-size: 13px; line-height: 1.6; }
-.bot .chat-bubble { background: #f3f3fa; color: var(--charcoal); border-radius: 2px 14px 14px 14px; }
-.user .chat-bubble { background: var(--teal); color: var(--charcoal); border-radius: 14px 2px 14px 14px; font-weight: 500; }
-.chat-input-row { padding: 12px; border-top: 1px solid #f0f0f5; display: flex; gap: 8px; }
-.chat-input-fake { flex: 1; background: #f7f7f9; border-radius: 100px; padding: 10px 16px; font-size: 13px; color: #aaa; }
-.chat-send { width: 36px; height: 36px; border-radius: 50%; background: var(--teal); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-
 /* ── FOR SALONS ── */
 .salons-pitch { background: white; }
 .pitch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
@@ -373,7 +339,7 @@ footer {
 
 @media (max-width: 768px) {
   .nav-links { display: none; }
-  .chat-wrapper, .pitch-grid { grid-template-columns: 1fr; }
+  .pitch-grid { grid-template-columns: 1fr; }
   .steps-grid { grid-template-columns: 1fr; }
   .step-card:first-child { border-radius: 16px 16px 0 0; }
   .step-card:last-child { border-radius: 0 0 16px 16px; }
@@ -816,38 +782,10 @@ function toggleFaq(btn) {
       <div class="step-card">
         <div class="step-num">Step 04</div>
         <div class="step-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 6h20v14a2 2 0 0 1-2 2H8l-4 3V6z" stroke="#1DC8C8" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 12h10M9 16h6" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        <div class="step-title">Ask anything, anytime</div>
-        <div class="step-desc"><a href="#chat" style="color:#1DC8C8;text-decoration:none;font-weight:600;">ManeMap AI</a> is there when you notice something weird at 11pm and just need a straight answer — no judgment, no waiting rooms.</div>
+        <div class="step-title">Get real answers</div>
+        <div class="step-desc">Still have questions after your consultation? <a href="#faq" style="color:#1DC8C8;text-decoration:none;font-weight:600;">Check the FAQ</a> anytime — no judgment, no waiting rooms.</div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- CHAT COMING SOON -->
-<section class="chat-section" id="chat">
-  <div class="section-inner">
-    <div class="chat-wrapper">
-      <div class="chat-copy">
-        <div class="section-eyebrow">ManeMap AI</div>
-        <h2 class="section-title">Your 2am questions, answered.</h2>
-        <p>Hair system questions don't keep business hours. ManeMap AI will know costs, maintenance, what's normal, and what's not — available whenever you need it, with answers that actually make sense.</p>
-        <p>Built on real wearer experience. No generic chatbot fluff.</p>
-      </div>
-      <div class="chat-demo" style="display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2.5rem;text-align:center;min-height:320px;">
-        <div style="width:56px;height:56px;border-radius:16px;background:#1D9E75;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="3" y="7" width="22" height="15" rx="5" stroke="white" stroke-width="1.5"/><path d="M8 14h4M8 18h8" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M14 4v3" stroke="white" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="3" r="1.5" fill="white"/></svg>
-        </div>
-        <div style="display:inline-flex;align-items:center;gap:6px;background:#E1F5EE;color:#085041;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:5px 12px;border-radius:20px;margin-bottom:1rem;">
-          <span style="width:6px;height:6px;background:#1D9E75;border-radius:50%;display:inline-block;"></span>
-          Coming soon
-        </div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:20px;font-weight:800;color:var(--charcoal);margin-bottom:0.75rem;">ManeMap AI is in development</h3>
-        <p style="font-size:14px;color:#555566;line-height:1.65;margin-bottom:1.75rem;max-width:300px;">An AI that actually knows hair systems — not a generic chatbot. Be the first to know when it launches.</p>
-        <a href="https://tally.so/r/Y5YXP6?utm_source=manemap&utm_medium=site&utm_campaign=ai_waitlist" target="_blank" style="display:inline-block;background:#1D9E75;color:white;text-decoration:none;padding:11px 24px;border-radius:100px;font-size:13px;font-weight:700;font-family:'DM Sans',sans-serif;">Join the AI waitlist →</a>
-        <p style="font-size:11px;color:#aaa;margin-top:10px;">No spam. Just a heads up when it's ready.</p>
-      </div>
-    </div>
-  </div>
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:2.5rem;">
       <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=education&utm_campaign=guide" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Download the free Starter Guide →</a>
       <a href="#faq" style="display:inline-flex;align-items:center;gap:8px;color:#888;text-decoration:none;font-size:13px;font-family:'DM Sans',sans-serif;">Still have questions? Read these →</a>
@@ -882,8 +820,8 @@ function toggleFaq(btn) {
           <div class="pitch-feature">
             <div class="pitch-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="7" width="14" height="10" rx="3" stroke="#1DC8C8" stroke-width="1.5"/><path d="M7 11h2M11 11h2M10 4v3" stroke="#1DC8C8" stroke-width="1.5" stroke-linecap="round"/><circle cx="10" cy="3" r="1" fill="#1DC8C8"/></svg></div>
             <div>
-              <div class="pitch-feature-title">AI handles aftercare Q&A</div>
-              <div class="pitch-feature-desc">Your clients troubleshoot aftercare with ManeMap AI instead of texting you after hours. Your phone stays quiet.</div>
+              <div class="pitch-feature-title">Built-in FAQ handles the basics</div>
+              <div class="pitch-feature-desc">Common aftercare questions — swimming, sweat, itching, hats — are answered on our FAQ before clients ever need to text you.</div>
             </div>
           </div>
           <div class="pitch-feature">
@@ -1096,21 +1034,6 @@ function showResult() {
     <div class="result-card"><div class="result-card-label">Est. monthly cost</div><div class="result-card-val">${costRange}</div><div style="font-size:11px;color:#888;margin-top:4px">${costCaveat}</div></div>
     <div class="result-card"><div class="result-card-label">Year 1 total</div><div class="result-card-val">${year1}</div></div>
     <div class="result-card"><div class="result-card-label">Maintenance style</div><div class="result-card-val">${maintenance === 'diy' ? 'Full DIY — no salon' : maintenance === 'partial' ? 'Mixed — salon installs, you maintain' : 'Full salon — every visit'}</div></div>`;
-}
-
-function handleAIWaitlist(btn) {
-  const input = btn.previousElementSibling;
-  const email = input.value.trim();
-  if(!email || !email.includes('@')) {
-    input.style.borderColor = '#E24B4A';
-    setTimeout(() => input.style.borderColor = '#e8e8f0', 2000);
-    return;
-  }
-  btn.textContent = "You're on the list!";
-  btn.style.background = '#085041';
-  btn.disabled = true;
-  input.disabled = true;
-  input.value = email;
 }
 
 function restartQuiz() {
