@@ -400,7 +400,7 @@ footer {
   </div>
   <div style="margin-top:2rem;text-align:center;">
     <p style="color:var(--text-light);font-size:13px;margin-bottom:10px;">Not ready to book yet?</p>
-    <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=hero&utm_campaign=lead_capture" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Download the free Starter Guide →</a>
+    <a onclick="trackClick('beehiiv_click', this)" href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=hero&utm_campaign=lead_capture" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Download the free Starter Guide →</a>
   </div>
 </section>
 
@@ -542,7 +542,7 @@ footer {
         <p style="font-size:12px;color:#888;margin-bottom:0.75rem;">Base types, what to expect, questions to ask — then find your specialist.</p>
         <a href="#specialists" style="font-size:13px;color:var(--teal);text-decoration:none;" onclick="document.getElementById('quizResult').style.display='none';document.getElementById('quizBody').style.display='block'">Or skip ahead to the directory →</a>
         <div style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #eee;">
-          <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=quiz_results&utm_campaign=guide" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#f7f7f5;border:1px solid #e8e8f0;border-radius:10px;padding:10px 14px;text-decoration:none;width:100%;">
+          <a onclick="trackClick('beehiiv_click', this)" href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=quiz_results&utm_campaign=guide" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#f7f7f5;border:1px solid #e8e8f0;border-radius:10px;padding:10px 14px;text-decoration:none;width:100%;">
             <div style="width:32px;height:32px;background:#1DC8C8;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3h10v10H3z" stroke="#141420" stroke-width="1.5" stroke-linejoin="round"/><path d="M6 6h4M6 8.5h4M6 11h2" stroke="#141420" stroke-width="1.5" stroke-linecap="round"/></svg>
             </div>
@@ -729,7 +729,7 @@ footer {
   </div>
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:2.5rem;">
       <a href="#specialists" style="display:inline-flex;align-items:center;gap:8px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Ready? Find your specialist →</a>
-      <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=faq&utm_campaign=guide" target="_blank" style="font-size:13px;color:#888;text-decoration:underline;text-underline-offset:3px;">Want this all in one place? Download the free Starter Guide →</a>
+      <a onclick="trackClick('beehiiv_click', this)" href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=faq&utm_campaign=guide" target="_blank" style="font-size:13px;color:#888;text-decoration:underline;text-underline-offset:3px;">Want this all in one place? Download the free Starter Guide →</a>
     </div>
   </div>
 </section>
@@ -790,7 +790,7 @@ function toggleFaq(btn) {
       </div>
     </div>
     <div style="display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:2.5rem;">
-      <a href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=education&utm_campaign=guide" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Download the free Starter Guide →</a>
+      <a onclick="trackClick('beehiiv_click', this)" href="https://manemap.beehiiv.com/?utm_source=manemap&utm_medium=education&utm_campaign=guide" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#1DC8C8;color:#141420;text-decoration:none;padding:12px 24px;border-radius:100px;font-size:14px;font-weight:700;font-family:'DM Sans',sans-serif;">Download the free Starter Guide →</a>
       <a href="#faq" style="display:inline-flex;align-items:center;gap:8px;color:#888;text-decoration:none;font-size:13px;font-family:'DM Sans',sans-serif;">Still have questions? Read these →</a>
     </div>
   </div>
@@ -856,7 +856,7 @@ function toggleFaq(btn) {
     <a href="#quiz">Get Started</a>
     <a href="#specialists">Find a Specialist</a>
     <a href="#for-salons">For Salons</a>
-    <a href="https://manemap.beehiiv.com/subscribe">Get the Free Guide →</a>
+    <a onclick="trackClick('beehiiv_click', this)" href="https://manemap.beehiiv.com/subscribe">Get the Free Guide →</a>
     <a href="https://tally.so/r/mZqXyv?utm_source=manemap&utm_medium=site&utm_campaign=specialist">Join as a Specialist</a>
     <a href="mailto:hello@manemap.com">Contact</a>
   </div>
@@ -1001,7 +1001,21 @@ function prevStep(current) {
   document.getElementById('quizProgress').style.width = `${((current-1)/5)*100}%`;
 }
 
+function trackClick(eventName, el) {
+  if (typeof gtag !== 'undefined') {
+    let placement = 'unknown';
+    try {
+      const url = new URL(el.href);
+      placement = url.searchParams.get('utm_medium') || 'unknown';
+    } catch(e) {}
+    gtag('event', eventName, { event_category: 'engagement', placement: placement });
+  }
+}
+
 function showResult() {
+  if (typeof gtag !== 'undefined') {
+    gtag('event', 'quiz_complete', { event_category: 'engagement' });
+  }
   document.getElementById('quizBody').style.display = 'none';
   document.getElementById('quizResult').classList.add('active');
   document.getElementById('quizProgress').style.width = '100%';
