@@ -1,0 +1,17 @@
+name: Check canonical trailing slashes
+on: push
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          FAILED=0
+          for f in specialists/*/index.html; do
+            u=$(grep -oP '(?<=rel="canonical" href=")[^"]*(?=")' "$f")
+            if [[ "$u" != */ ]]; then
+              echo "Missing trailing slash: $f"
+              FAILED=1
+            fi
+          done
+          if [ "$FAILED" -eq 1 ]; then exit 1; fi
