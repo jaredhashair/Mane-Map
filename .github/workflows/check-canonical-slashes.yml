@@ -7,9 +7,9 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           FAILED=0
-          for f in specialists/*/index.html; do
-            u=$(grep -oP '(?<=rel="canonical" href=")[^"]*(?=")' "$f")
-            if [[ "$u" != */ ]]; then
+          for f in $(find . -name index.html -not -path "*/node_modules/*"); do
+            u=$(grep -oP '(?<=rel="canonical" href=")[^"]*(?=")' "$f" || true)
+            if [ -n "$u" ] && [[ "$u" != */ ]]; then
               echo "Missing trailing slash: $f"
               FAILED=1
             fi
