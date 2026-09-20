@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Your at-home hair system care video from Lindsey Newton’s Premium Men’s Studio.">
+  <title>Your At-Home Care Video | Mane Map</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BHLXZM72F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4BHLXZM72F');
+  </script>
+  <style>
+    :root { color-scheme: dark; --teal:#1DC8C8; --ink:#141420; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--ink); color:#F7F7F5; font-family:'DM Sans',sans-serif; -webkit-font-smoothing:antialiased; }
+    main { width:min(100% - 40px,960px); margin:0 auto; padding:36px 0 28px; }
+    .brand { font-family:'Syne',sans-serif; font-size:16px; font-weight:800; letter-spacing:.08em; }
+    .brand span { color:var(--teal); }
+    header { margin:48px 0 24px; }
+    .salon { color:var(--teal); font-size:13px; line-height:1.6; margin:0 0 10px; }
+    h1 { font-family:'Syne',sans-serif; font-size:clamp(27px,5vw,42px); letter-spacing:-.025em; line-height:1.15; margin:0 0 12px; }
+    .intro { color:#ccccdd; font-size:16px; line-height:1.6; margin:0; }
+    .video { aspect-ratio:16/9; background:#08080d; border:1px solid #ffffff18; border-radius:14px; overflow:hidden; }
+    iframe { width:100%; height:100%; display:block; border:0; }
+    .hint { color:#a7a7b8; font-size:13px; line-height:1.6; margin:16px 0 0; }
+    .unavailable { padding:32px; border:1px solid #ffffff20; border-radius:14px; background:#1e1e2e; }
+    .unavailable h2 { margin:0 0 12px; font-size:22px; }
+    .unavailable p { margin:0; line-height:1.6; color:#ccccdd; }
+    footer { margin-top:42px; padding-top:20px; border-top:1px solid #ffffff14; color:#888899; font-size:12px; line-height:1.7; }
+    footer a { color:#aaaabb; text-underline-offset:3px; }
+    [hidden] { display:none!important; }
+    @media(max-width:480px) { main { width:calc(100% - 28px); padding-top:24px; } header { margin-top:32px; } .video { border-radius:8px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="brand">MANE <span>MAP</span></div>
+    <header>
+      <p class="salon">For clients of Lindsey Newton’s Premium Men’s Studio</p>
+      <h1>Your at-home care video</h1>
+      <p class="intro" id="intro">Keep your kit nearby. Press play, and pause whenever you need.</p>
+    </header>
+    <section id="watch" aria-label="At-home care video" hidden>
+      <div class="video" id="videoContainer"></div>
+      <p class="hint">Turn your phone sideways for a bigger view. You can return to this page whenever you need a refresher.</p>
+    </section>
+    <section class="unavailable" id="unavailable" hidden>
+      <h2>This video is currently unavailable.</h2>
+      <p>Please contact your specialist for help with your at-home care.</p>
+    </section>
+    <noscript><p>Please enable JavaScript to watch your care video.</p></noscript>
+    <footer>Created by Jared Has Hair for Lindsey Newton’s Premium Men’s Studio.<br>
+      <a href="/privacy/">Privacy</a> &nbsp;·&nbsp; <a href="/terms/">Terms</a>
+    </footer>
+  </main>
+  <script>
+    // Manual availability switch. This is not secure license enforcement.
+    // To revoke a saved YouTube link too, make the video private in YouTube.
+    const VIDEO_AVAILABLE = true;
+    const VIDEO_ID = 'ywDhM2iKCZE';
+    if (VIDEO_AVAILABLE) {
+      const player = document.createElement('iframe');
+      player.src = 'https://www.youtube-nocookie.com/embed/' + VIDEO_ID + '?playsinline=1&rel=0';
+      player.title = 'At-home hair system care video';
+      player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      player.allowFullscreen = true;
+      player.referrerPolicy = 'strict-origin-when-cross-origin';
+      document.getElementById('videoContainer').appendChild(player);
+      document.getElementById('watch').hidden = false;
+    } else {
+      document.getElementById('intro').hidden = true;
+      document.getElementById('unavailable').hidden = false;
+    }
+    gtag('event', 'client_care_page_view', {
+      specialist_slug: 'lindsey-newtons-premium-mens-studio',
+      video_available: VIDEO_AVAILABLE
+    });
+  </script>
+</body>
+</html>
