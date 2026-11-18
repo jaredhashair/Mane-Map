@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+  <head>
+<meta name="robots" content="noindex, nofollow">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Argyle Page Mockup — Jared's Partner Page, Proposed Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600;6..72,700&display=swap" rel="stylesheet" />
+    <style>
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2rem; }
+
+      :root {
+        --bg: #edeae4;
+        --panel: #ffffff;
+        --panel-2: #f6f3ec;
+        --ink: #23211d;
+        --ink-soft: #5c574d;
+        --line: #d8d2c6;
+        --accent: #b5502a;
+        --accent-ink: #ffffff;
+        --accent-soft: #f7e3d8;
+        --pin: #b5502a;
+        --good: #2e6b4f;
+        --stage-bg: #e2ded4;
+        --shadow: 0 18px 50px rgba(35, 33, 29, .16);
+        color-scheme: light;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #16171a;
+          --panel: #1f2126;
+          --panel-2: #26282e;
+          --ink: #ece8df;
+          --ink-soft: #a49c8d;
+          --line: #3a3d44;
+          --accent: #e07a4e;
+          --accent-ink: #1c130e;
+          --accent-soft: #3a2a20;
+          --pin: #e07a4e;
+          --good: #7fc7a5;
+          --stage-bg: #101114;
+          --shadow: 0 18px 50px rgba(0, 0, 0, .5);
+          color-scheme: dark;
+        }
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { max-width: 1120px; margin: 0 auto; padding: 28px 18px 64px; }
+
+      /* ---------- page header ---------- */
+      .kicker {
+        display: inline-flex; align-items: center; gap: 8px;
+        font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+        color: var(--accent);
+      }
+      .kicker::before {
+        content: ""; width: 22px; height: 22px; flex: none;
+        background:
+          linear-gradient(45deg, transparent 46%, var(--accent) 46%, var(--accent) 54%, transparent 54%),
+          linear-gradient(-45deg, transparent 46%, var(--accent) 46%, var(--accent) 54%, transparent 54%);
+        opacity: .85;
+      }
+      h1 {
+        font-family: "Newsreader", Georgia, serif;
+        font-weight: 600; font-size: clamp(30px, 5.4vw, 46px);
+        line-height: 1.08; margin: 12px 0 10px; letter-spacing: -.01em;
+      }
+      .lede { max-width: 62ch; color: var(--ink-soft); font-size: 17px; margin: 0 0 6px; }
+      .lede strong { color: var(--ink); }
+      .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+      .meta-chip {
+        font-size: 13px; font-weight: 600; padding: 7px 12px;
+        border: 1px solid var(--line); border-radius: 999px; background: var(--panel);
+        color: var(--ink-soft);
+      }
+      .meta-chip b { color: var(--ink); }
+
+      /* ---------- controls ---------- */
+      .controls {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+        margin: 26px 0 18px;
+      }
+      .seg {
+        display: inline-flex; flex-wrap: wrap; gap: 4px;
+        background: var(--panel); border: 1px solid var(--line);
+        border-radius: 12px; padding: 4px;
+      }
+      .seg button {
+        appearance: none; border: 0; cursor: pointer; background: transparent;
+        font: inherit; font-size: 14px; font-weight: 600; color: var(--ink-soft);
+        padding: 9px 14px; border-radius: 9px; min-height: 40px;
+      }
+      .seg button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+      .seg button:focus-visible, .toggle-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+      .toggle-btn {
+        appearance: none; cursor: pointer; font: inherit; font-size: 14px; font-weight: 600;
+        background: var(--panel); color: var(--ink);
+        border: 1px solid var(--line); border-radius: 12px; padding: 9px 14px; min-height: 48px;
+        display: inline-flex; align-items: center; gap: 9px;
+      }
+      .toggle-btn .dot {
+        width: 34px; height: 20px; border-radius: 999px; background: var(--line);
+        position: relative; flex: none; transition: background .15s ease;
+      }
+      .toggle-btn .dot::after {
+        content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px;
+        border-radius: 50%; background: var(--panel); transition: left .15s ease;
+        box-shadow: 0 1px 3px rgba(0,0,0,.25);
+      }
+      .toggle-btn[aria-pressed="true"] .dot { background: var(--accent); }
+      .toggle-btn[aria-pressed="true"] .dot::after { left: 16px; }
+      .controls .hint { font-size: 13px; color: var(--ink-soft); margin-left: auto; }
+
+      /* ---------- stage & frames ---------- */
+      .stage {
+        background: var(--stage-bg);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: clamp(14px, 3.5vw, 34px);
+        display: flex; justify-content: center;
+        background-image:
+          linear-gradient(45deg, transparent 48.5%, rgba(127,120,105,.10) 48.5%, rgba(127,120,105,.10) 51.5%, transparent 51.5%),
+          linear-gradient(-45deg, transparent 48.5%, rgba(127,120,105,.10) 48.5%, rgba(127,120,105,.10) 51.5%, transparent 51.5%);
+        background-size: 56px 56px;
+      }
+      .phone {
+        width: min(392px, 100%); flex: none;
+        background: #111; border-radius: 40px; padding: 10px;
+        box-shadow: var(--shadow);
+      }
+      .phone .screen {
+        background: #fff; border-radius: 31px; overflow: hidden;
+        max-height: 880px; overflow-y: auto;
+      }
+      .browser {
+        width: min(980px, 100%); flex: none;
+        background: #fff; border-radius: 14px; overflow: hidden;
+        box-shadow: var(--shadow); border: 1px solid #cfc9bb;
+      }
+      .browser-bar {
+        display: flex; align-items: center; gap: 10px;
+        background: #eceae4; padding: 9px 14px; border-bottom: 1px solid #ddd7ca;
+      }
+      .browser-bar .bdots { display: flex; gap: 6px; flex: none; }
+      .browser-bar .bdots i { width: 11px; height: 11px; border-radius: 50%; background: #c9c2b2; display: block; }
+      .browser-bar .url {
+        flex: 1; min-width: 0; background: #fff; border: 1px solid #ddd7ca; border-radius: 8px;
+        font-size: 12.5px; color: #6d675c; padding: 5px 12px;
+        white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+      .browser .screen { max-height: 900px; overflow-y: auto; }
+
+      /* ---------- mock site (inside frames) ---------- */
+      .mock { background: #fff; color: #26241f; font-size: 14.5px; }
+      .mock .m-topbar {
+        display: flex; align-items: center; justify-content: space-between;
+        padding: 12px 18px; border-bottom: 1px solid #e7e2d6;
+      }
+      .mock .m-brand { font-family: "Newsreader", Georgia, serif; font-weight: 700; font-size: 17px; letter-spacing: .01em; }
+      .mock .m-brand span { color: #b5502a; }
+      .mock .m-nav { display: flex; gap: 14px; font-size: 12px; font-weight: 600; color: #8a8375; white-space: nowrap; }
+      .mock:not(.desktop) .m-nav span:nth-child(2) { display: none; }
+      .mock .m-brand { white-space: nowrap; }
+      .mock .m-body { padding: 20px 18px 0; }
+      .mock h2.m-name {
+        font-family: "Newsreader", Georgia, serif; font-size: 27px; font-weight: 600;
+        margin: 0 0 2px; line-height: 1.12; color: #26241f;
+      }
+      .mock h3.m-h {
+        font-family: "Newsreader", Georgia, serif; font-size: 20px; font-weight: 600;
+        margin: 0 0 10px; color: #26241f;
+      }
+      .mock .m-handle { font-size: 13px; font-weight: 700; color: #b5502a; margin: 0 0 8px; }
+      .mock p { margin: 0 0 10px; color: #4c473d; }
+      .mock .m-section { padding: 18px 0 4px; border-top: 1px solid #eee9dd; margin-top: 18px; position: relative; }
+      .mock .m-section:first-child { border-top: 0; margin-top: 0; padding-top: 2px; }
+
+      .ph {
+        border: 1.5px dashed #c4bda9; background: #f4f1e8; color: #8a8375;
+        display: flex; align-items: center; justify-content: center; text-align: center;
+        font-size: 12px; font-weight: 600; letter-spacing: .04em; padding: 10px;
+      }
+      .ph svg { display: block; }
+      .ph .ph-label { position: absolute; left: 8px; bottom: 8px; background: rgba(38,36,31,.78); color: #fff; font-size: 10.5px; padding: 3px 8px; border-radius: 5px; letter-spacing: .06em; }
+      .ph-wrap { position: relative; }
+
+      .m-intro-photo { border-radius: 14px; aspect-ratio: 4 / 3.4; width: 100%; }
+      .m-current-profile { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 18px; }
+      .m-profile-pic { border-radius: 50%; width: 118px; height: 118px; aspect-ratio: 1 / 1; flex: none; overflow: hidden; }
+      .m-current-profile-note { font-size: 12.5px; color: #a39a86; margin: 8px 0 0; max-width: 270px; }
+      .m-ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      .m-ba { border-radius: 12px; aspect-ratio: 1 / 1.08; width: 100%; }
+      .m-ba-pair-label { font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #8a8375; margin: 12px 0 6px; }
+      .m-ba-pair-label:first-of-type { margin-top: 2px; }
+
+      .m-product-photo { border-radius: 14px; aspect-ratio: 16 / 10; width: 100%; }
+      .m-price { font-size: 20px; font-weight: 700; color: #26241f; margin: 10px 0 2px; }
+      .m-price .ph-inline {
+        font-size: 13px; font-weight: 600; color: #8a8375; border: 1.5px dashed #c4bda9;
+        padding: 1px 8px; border-radius: 6px; background: #f4f1e8; vertical-align: 2px;
+      }
+      .m-prod-name { font-weight: 700; font-size: 16px; margin: 0 0 4px; }
+      .m-cta {
+        display: block; width: 100%; text-align: center; text-decoration: none;
+        background: #b5502a; color: #fff; font-weight: 700; font-size: 15px;
+        border-radius: 11px; padding: 13px 16px; margin-top: 12px;
+      }
+      .m-cta.ghost { background: #26241f; }
+      .code-chip {
+        display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+        background: #f7e3d8; border: 1px dashed #b5502a; border-radius: 11px;
+        padding: 10px 13px; margin-top: 12px; font-size: 13.5px; color: #6e3418;
+      }
+      .code-chip b.code {
+        font-size: 16px; letter-spacing: .08em; background: #fff; border: 1px solid #e3bda6;
+        padding: 3px 10px; border-radius: 7px; color: #93390f;
+      }
+      .spec-box { background: #f8f5ee; border: 1px solid #e7e2d6; border-radius: 12px; padding: 13px 15px; margin-top: 14px; }
+      .spec-box h4 { margin: 0 0 8px; font-size: 13px; letter-spacing: .09em; text-transform: uppercase; color: #8a8375; }
+      .spec-row { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-top: 1px dotted #ddd5c3; font-size: 13.5px; }
+      .spec-row:first-of-type { border-top: 0; }
+      .spec-row .k { color: #8a8375; font-weight: 600; }
+      .spec-row .v { font-weight: 600; color: #4c473d; text-align: right; }
+      .spec-row .v.tbd { color: #a39a86; font-weight: 500; font-style: italic; }
+
+      .m-paths { display: grid; grid-template-columns: 1fr; gap: 12px; }
+      .m-path { border: 1px solid #e7e2d6; border-radius: 14px; padding: 15px 16px 7px; background: #fdfcf9; }
+      .m-path h4 { margin: 0 0 4px; font-size: 16px; font-family: "Newsreader", Georgia, serif; font-weight: 600; }
+      .m-path .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #b5502a; margin-bottom: 6px; }
+      .m-path ol { margin: 6px 0 10px; padding-left: 20px; color: #4c473d; }
+      .m-path ol li { margin-bottom: 6px; }
+      .m-path p { font-size: 13.5px; }
+
+      .swatches { display: flex; flex-wrap: wrap; gap: 7px; margin: 10px 0 4px; }
+      .swatches i { width: 24px; height: 24px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 1px #d8d2c6; display: block; }
+      .m-select {
+        display: flex; justify-content: space-between; align-items: center;
+        border: 1px solid #d8d2c6; border-radius: 9px; padding: 10px 12px;
+        font-size: 13.5px; color: #4c473d; background: #fff; margin-top: 10px;
+      }
+      .mini-prod { display: flex; gap: 12px; align-items: center; border: 1px solid #e7e2d6; border-radius: 12px; padding: 11px 12px; margin-top: 12px; background: #fdfcf9; }
+      .mini-prod .thumb { width: 58px; height: 58px; border-radius: 9px; flex: none; }
+      .mini-prod .t { font-weight: 700; font-size: 14px; margin: 0; }
+      .mini-prod .s { font-size: 12.5px; color: #8a8375; margin: 2px 0 0; }
+
+      .short-player {
+        width: 168px; aspect-ratio: 9 / 16; margin: 4px auto 8px; border-radius: 16px;
+        background: #1d1b17; color: #fff; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 10px; position: relative;
+      }
+      .short-player .play {
+        width: 52px; height: 52px; border-radius: 50%; background: #b5502a;
+        display: flex; align-items: center; justify-content: center;
+      }
+      .short-player .play::after {
+        content: ""; border-left: 16px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 4px;
+      }
+      .short-player .cap { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #cfc9ba; padding: 0 12px; text-align: center; }
+      .short-note { text-align: center; font-size: 12.5px; color: #8a8375; }
+
+      .m-bottom-banner {
+        background: #26241f; color: #f3efe4; border-radius: 14px; padding: 18px;
+        text-align: center; margin-top: 20px;
+      }
+      .m-bottom-banner .big { font-family: "Newsreader", Georgia, serif; font-size: 20px; margin: 0 0 4px; color: #fff; }
+      .m-bottom-banner .code-chip { justify-content: center; background: #33291f; border-color: #e07a4e; color: #f3d9c8; }
+      .m-bottom-banner .code-chip b.code { background: #26241f; color: #ffb98f; border-color: #6b4a35; }
+      .m-footer { margin-top: 22px; border-top: 1px solid #e7e2d6; padding: 16px 18px 20px; font-size: 12px; color: #8a8375; display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+      .m-gap { height: 190px; background: repeating-linear-gradient(-45deg, #faf8f2, #faf8f2 12px, #f3efe3 12px, #f3efe3 24px); display: flex; align-items: center; justify-content: center; color: #a39a86; font-size: 12px; font-weight: 600; letter-spacing: .06em; margin-top: 18px; }
+
+      /* desktop mock layout */
+      .mock.desktop .m-body { padding: 26px 30px 0; }
+      .mock.desktop .m-intro { display: grid; grid-template-columns: 300px 1fr; gap: 26px; align-items: center; }
+      .mock.desktop .m-intro-photo { aspect-ratio: 4 / 3.6; }
+      .mock.desktop h2.m-name { font-size: 36px; }
+      .mock.desktop .m-ba-all { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+      .mock.desktop .m-prod-row { display: grid; grid-template-columns: 1.25fr 1fr; gap: 24px; align-items: start; }
+      .mock.desktop .m-paths { grid-template-columns: 1fr 1fr; }
+      .mock.desktop .m-short-row { display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: center; }
+      .mock.desktop .m-short-row .short-player { margin: 0; }
+      .mock.desktop .m-short-row .short-note { text-align: left; }
+
+      /* ---------- annotation pins ---------- */
+      .pin {
+        display: none; position: absolute; z-index: 3;
+        width: 26px; height: 26px; border-radius: 50%;
+        background: var(--pin); color: #fff; font-size: 13px; font-weight: 700;
+        align-items: center; justify-content: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,.3); border: 2px solid #fff;
+      }
+      .show-pins .pin { display: inline-flex; }
+      .pin-target { position: relative; }
+      .show-pins .pin-target { outline: 2px dashed var(--pin); outline-offset: 5px; border-radius: 6px; }
+      .pin.tr { top: -13px; right: -6px; }
+      .pin.tl { top: -13px; left: -6px; }
+
+      /* ---------- notes ---------- */
+      .notes-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 30px 0 4px; }
+      .notes-head h2 { font-family: "Newsreader", Georgia, serif; font-size: 26px; font-weight: 600; margin: 0; }
+      .notes-head .sub { color: var(--ink-soft); font-size: 14px; }
+      .notes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 14px; }
+      .note {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 15px 16px;
+      }
+      .note .n {
+        display: inline-flex; align-items: center; justify-content: center;
+        width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--accent-ink);
+        font-size: 13px; font-weight: 700; margin-bottom: 8px;
+      }
+      .note h3 { margin: 0 0 5px; font-size: 15.5px; }
+      .note p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+      .note.problem .n { background: #8a3b2e; color: #fff; }
+      @media (prefers-color-scheme: dark) { .note.problem .n { background: #a34a38; } }
+
+      /* ---------- small ask / product page ---------- */
+      .ask { margin-top: 44px; }
+      .ask > h2 { font-family: "Newsreader", Georgia, serif; font-size: 26px; font-weight: 600; margin: 0 0 6px; }
+      .ask > p { color: var(--ink-soft); max-width: 68ch; margin: 0 0 16px; }
+      .ask-card {
+        background: var(--panel); border: 1px solid var(--line); border-radius: 18px;
+        padding: clamp(16px, 3vw, 26px); box-shadow: var(--shadow);
+      }
+      .ask-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+      @media (min-width: 760px) { .ask-grid { grid-template-columns: 1fr 1fr; } }
+      .ask-grid .col-label { font-size: 11.5px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-soft); margin: 0 0 10px; }
+      .jared-block {
+        border: 2px solid var(--accent); border-radius: 14px; padding: 16px 17px; background: var(--accent-soft);
+      }
+      .jared-block h3 { margin: 0 0 4px; font-family: "Newsreader", Georgia, serif; font-size: 19px; }
+      .jared-block p { margin: 0 0 9px; font-size: 14px; color: var(--ink-soft); }
+      .jared-block .spec-row { border-top-color: var(--line); }
+      .jared-block .spec-row .k { color: var(--ink-soft); }
+      .jared-block .spec-row .v { color: var(--ink); }
+      .jared-block .spec-row .v.tbd { color: var(--ink-soft); }
+      .flag {
+        display: flex; gap: 10px; align-items: flex-start; margin-top: 14px;
+        background: var(--panel-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px;
+        font-size: 14px;
+      }
+      .flag .fi { flex: none; width: 22px; height: 22px; border-radius: 50%; background: #8a3b2e; color: #fff; font-weight: 700; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
+      @media (prefers-color-scheme: dark) { .flag .fi { background: #a34a38; } }
+      .flag p { margin: 0; color: var(--ink-soft); }
+      .flag p b { color: var(--ink); }
+
+      .open-q {
+        margin-top: 26px; border: 1.5px dashed var(--accent); border-radius: 16px;
+        padding: 18px 20px; background: var(--panel);
+      }
+      .open-q h2 { font-family: "Newsreader", Georgia, serif; font-size: 21px; margin: 0 0 6px; }
+      .open-q p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+      .open-q .codes { display: inline-flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+      .open-q .codes b {
+        font-size: 15px; letter-spacing: .07em; border: 1px solid var(--line);
+        background: var(--panel-2); border-radius: 8px; padding: 5px 12px; color: var(--ink);
+      }
+      .foot-note { margin-top: 34px; font-size: 13px; color: var(--ink-soft); border-top: 1px solid var(--line); padding-top: 14px; }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <span class="kicker">Partner page proposal</span>
+      <h1>Jared's partner page, rearranged</h1>
+      <p class="lede">
+        Same page, better order: Jared's story and the before &amp; afters come first, and the product and
+        discount code sit where the buying decision happens. Compare the page as it stands today with the
+        proposed layout below — most traffic is mobile, so mobile comes first. The numbered pins mark
+        each change, with notes underneath.
+      </p>
+      <div class="meta-row">
+        <span class="meta-chip">Page: <b>Jared's affiliate page, Toupee by Argyle</b></span>
+        <span class="meta-chip">Code: <b>UNBALD / UNBALD50 — to confirm</b></span>
+        <span class="meta-chip">Status: <b>suggestions, not a spec</b></span>
+      </div>
+
+      <div class="controls" role="group" aria-label="Mockup view controls">
+        <div class="seg" role="group" aria-label="Choose a layout">
+          <button type="button" id="btn-current" aria-pressed="false">Current · mobile</button>
+          <button type="button" id="btn-mobile" aria-pressed="true">Proposed · mobile</button>
+          <button type="button" id="btn-desktop" aria-pressed="false">Proposed · desktop</button>
+        </div>
+        <button type="button" class="toggle-btn" id="btn-pins" aria-pressed="true">
+          Change markers <span class="dot" aria-hidden="true"></span>
+        </button>
+        <span class="hint" id="view-hint">Proposed mobile layout, in Jared's suggested order.</span>
+      </div>
+
+      <div class="stage" id="stage"></div>
+
+      <div class="notes-head">
+        <h2 id="notes-title">What changed, and why</h2>
+        <span class="sub" id="notes-sub">Six changes plus the video slot, numbered to match the pins above.</span>
+      </div>
+      <div class="notes-grid" id="notes"></div>
+
+      <section class="ask" aria-labelledby="ask-h">
+        <h2 id="ask-h">The small ask: one block on the existing product page</h2>
+        <p>
+          No custom product page during the trial. Instead, a single Jared block dropped into the product page
+          a buyer lands on from his videos — his specs and setup, a line on getting color help, and the mail-in
+          explained where a current wearer is actually deciding.
+        </p>
+        <div class="ask-card">
+          <div class="ask-grid">
+            <div>
+              <p class="col-label">Product page today</p>
+              <div class="ph ph-wrap" style="border-radius:12px; aspect-ratio:16/9;">
+                <span>PRODUCT PHOTO</span>
+              </div>
+              <p style="font-weight:700; margin:12px 0 2px;">Argyle Hair System</p>
+              <p style="color:var(--ink-soft); font-size:14px; margin:0;">No mention of Jared, no color guidance, mail-in not explained.</p>
+              <div class="swatches" aria-hidden="true">
+                <i style="background:#191512"></i><i style="background:#2e2019"></i><i style="background:#4a3220"></i>
+                <i style="background:#6b4a2c"></i><i style="background:#8a6238"></i><i style="background:#a67c4e"></i>
+                <i style="background:#c49a68"></i><i style="background:#7a7a72"></i><i style="background:#b9b4a6"></i>
+                <i style="background:#ddd6c4"></i>
+              </div>
+              <div class="m-select" style="border-color:var(--line); color:var(--ink-soft); background:var(--panel);"><span>Color — pick from the dropdown</span><span aria-hidden="true">▾</span></div>
+              <div class="flag">
+                <span class="fi" aria-hidden="true">!</span>
+                <p><b>Mismatch worth flagging:</b> the color chart on the page lists a few colors the dropdown doesn't offer, so a buyer can pick a shade he can't actually order.</p>
+              </div>
+            </div>
+            <div>
+              <p class="col-label">With the Jared block added</p>
+              <div class="jared-block">
+                <h3>The setup Jared wears</h3>
+                <p>“This is the exact system in my videos. If you're ordering because of me, start here.”</p>
+                <div class="spec-row"><span class="k">Base</span><span class="v tbd">Jared's spec — to fill in</span></div>
+                <div class="spec-row"><span class="k">Hair color</span><span class="v tbd">Jared's spec — to fill in</span></div>
+                <div class="spec-row"><span class="k">Density</span><span class="v tbd">Jared's spec — to fill in</span></div>
+                <div class="spec-row"><span class="k">Length / style</span><span class="v tbd">Jared's spec — to fill in</span></div>
+                <div class="spec-row"><span class="k">Not sure of your color?</span><span class="v">Get matched in person, or ask Argyle for help</span></div>
+                <div class="spec-row"><span class="k">Already wearing one?</span><span class="v">Mail in your old piece — the new one is cut to match</span></div>
+              </div>
+              <div class="flag">
+                <span class="fi" aria-hidden="true">✓</span>
+                <p><b>One template block, easy to undo.</b> It helps every buyer who lands here, not just Jared's — and the mail-in is the main reason a current wearer would buy at all.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="open-q" aria-labelledby="openq-h">
+        <h2 id="openq-h">One open question</h2>
+        <p>
+          The code appears two ways in Jared's links. This page uses <b>UNBALD50</b> — please confirm
+          which one checkout actually honors before it goes on the page:
+        </p>
+        <div class="codes"><b>UNBALD</b><b>UNBALD50</b></div>
+      </section>
+
+      <p class="foot-note">
+        Photos and product shots are placeholders. Final wording, specs, and the confirmed code go in before anything ships.
+      </p>
+    </main>
+
+    <script>
+      (function () {
+        "use strict";
+
+        /* ---------- placeholder artwork (simple silhouettes) ---------- */
+        function headSVG(kind, label, size) {
+          size = size || 72;
+          var hair = kind === "after"
+            ? '<path d="M60 12 C34 12 24 32 25 52 C26 40 34 30 44 28 C42 36 44 40 46 44 C48 34 56 27 66 28 C76 29 84 36 86 46 C88 38 88 32 86 26 C96 32 101 42 100 54 C102 32 90 12 60 12 Z" fill="#4a4238"/>'
+            : '<path d="M60 14 C40 14 28 28 26 46 C30 34 40 26 52 25 C44 30 40 36 39 42 C46 32 54 29 62 30 C72 31 80 36 84 44 C83 37 79 31 74 27 C86 30 94 38 96 48 C95 28 82 14 60 14 Z" fill="#9a917e" opacity="0.55"/>';
+          return '<svg viewBox="0 0 120 120" width="' + size + '" height="' + size + '" role="img" aria-label="' + label + '">'
+            + '<circle cx="60" cy="58" r="34" fill="#ddd5c2"/>'
+            + '<path d="M28 120 C30 100 44 94 60 94 C76 94 90 100 92 120 Z" fill="#c9c0aa"/>'
+            + hair + '</svg>';
+        }
+        function photoPanel(cls, kind, label, tag, size) {
+          return '<div class="ph ph-wrap ' + cls + '">' + headSVG(kind, label, size)
+            + '<span class="ph-label">' + tag + '</span></div>';
+        }
+        function baPair(pairLabel, pairNo) {
+          return '<p class="m-ba-pair-label">' + pairLabel + '</p>'
+            + '<div class="m-ba-grid">'
+            + photoPanel("m-ba", "before", "Before photo, pair " + pairNo, "BEFORE")
+            + photoPanel("m-ba", "after", "After photo, pair " + pairNo, "AFTER")
+            + '</div>';
+        }
+        function codeChip() {
+          return '<div class="code-chip"><span>Jared\'s code — $50 off:</span><b class="code">UNBALD50</b></div>';
+        }
+        function topbar() {
+          return '<div class="m-topbar"><div class="m-brand">Toupee by <span>Argyle</span></div>'
+            + '<div class="m-nav"><span>Shop</span><span>How it works</span><span>Contact</span></div></div>';
+        }
+        function specBox() {
+          return '<div class="spec-box"><h4>The setup Jared wears</h4>'
+            + '<div class="spec-row"><span class="k">Base</span><span class="v tbd">spec — to fill in</span></div>'
+            + '<div class="spec-row"><span class="k">Hair color</span><span class="v tbd">spec — to fill in</span></div>'
+            + '<div class="spec-row"><span class="k">Density</span><span class="v tbd">spec — to fill in</span></div>'
+            + '<div class="spec-row"><span class="k">Length / style</span><span class="v tbd">spec — to fill in</span></div></div>';
+        }
+        function swatchRow() {
+          var colors = ["#191512","#2e2019","#4a3220","#6b4a2c","#8a6238","#a67c4e","#c49a68","#7a7a72","#b9b4a6","#ddd6c4","#5a4632","#3a2d20"];
+          var out = '<div class="swatches" aria-hidden="true">';
+          for (var i = 0; i < colors.length; i++) out += '<i style="background:' + colors[i] + '"></i>';
+          return out + '</div>';
+        }
+        function shortBlock() {
+          return '<div class="m-short-row"><div class="short-player"><div class="play"></div><div class="cap">YouTube Short</div></div>'
+            + '<div><h3 class="m-h">See it in action</h3>'
+            + '<p class="short-note">Jared styling and wearing his system, in a <b>vertical player</b> — it plays right here on the page instead of sending people off to YouTube.</p></div></div>';
+        }
+        function pathsBlock() {
+          return '<div class="m-paths">'
+            + '<div class="m-path"><span class="tag">Path one</span><h4>Already wearing one?</h4>'
+            + '<p>Reordering is the easy part — Argyle\'s mail-in does the matching for you:</p>'
+            + '<ol><li>Mail in the system you\'re wearing now.</li>'
+            + '<li>Argyle cuts the new one to match your head shape and haircut.</li>'
+            + '<li>The new piece is mailed back, ready to wear.</li></ol></div>'
+            + '<div class="m-path"><span class="tag">Path two</span><h4>Brand new to this?</h4>'
+            + '<p>Don\'t buy your first one blind off a web page. Get fitted at a salon first:</p>'
+            + '<ol><li>A specialist takes your template and matches your color in person.</li>'
+            + '<li>Your first system is ordered to that exact spec.</li>'
+            + '<li>After that, reorders are easy — see path one.</li></ol></div>'
+            + '</div>';
+        }
+        function colorHelpBlock() {
+          return '<h3 class="m-h">Not sure about color?</h3>'
+            + '<p>New wearers should be color matched in person at the fitting. Already wearing one? You most likely know your color. Either way, Argyle can help you confirm it before you order.</p>'
+            + '<div class="mini-prod pin-target"><span class="pin tr">5</span>'
+            + '<div class="ph thumb" style="border-radius:9px;">RING</div>'
+            + '<div><p class="t">Hair Color Swatch Ring</p>'
+            + '<p class="s">Lives here, in color help — not in Product Picks. A matching tool, not a product pick.</p></div></div>';
+        }
+        function footerMock() {
+          return '<div class="m-footer"><span>Toupee by Argyle</span><span>Shipping &amp; returns</span><span>Contact</span><span>© Argyle</span></div>';
+        }
+
+        /* ---------- PROPOSED (shared sections, mobile & desktop) ---------- */
+        function proposedMock(isDesktop) {
+          var intro = '<div class="m-section pin-target"><span class="pin tl">1</span><div class="m-intro">'
+            + photoPanel("m-intro-photo", "after", "Photo of Jared wearing his Argyle system", "JARED — PHOTO", 132)
+            + '<div><h2 class="m-name">Jared Has Hair</h2><p class="m-handle">@jaredhashair</p>'
+            + '<p>Hey, it\'s Jared from @jaredhashair! I\'ve been wearing a toupee for almost two years and Toupees By Argyle is the system I have used since day one. If you\'re wondering what my secret is to a great hairline, the truth is, it\'s not so much what I\'m doing, but what I\'m ordering. If you\'ve ever seen any of my videos and thought, "I want that hairline", then you came to the right place.</p></div>'
+            + '</div></div>';
+
+          var ba = '<div class="m-section pin-target"><span class="pin tl">2</span>'
+            + '<h3 class="m-h">Before &amp; after</h3><div class="m-ba-all">'
+            + '<div>' + baPair("Pair one", 1) + '</div><div>' + baPair("Pair two", 2) + '</div>'
+            + '</div></div>';
+
+          var watch = '<div class="m-section pin-target"><span class="pin tl">7</span>' + shortBlock() + '</div>';
+
+          var product = '<div class="m-section"><h3 class="m-h">The system I wear</h3><div class="m-prod-row"><div>'
+            + '<div class="ph ph-wrap m-product-photo"><span>PRODUCT PHOTO</span><span class="ph-label">ARGYLE SYSTEM</span></div>'
+            + '</div><div>'
+            + '<p class="m-prod-name">Argyle Hair System — Jared\'s setup</p>'
+            + '<p class="m-price"><span class="ph-inline">price</span></p>'
+            + '<p>The system from my videos. My specs are listed below — use them as a starting point, but pick the color that matches your own hair.</p>'
+            + '<div class="pin-target">' + '<span class="pin tr">3</span>' + codeChip() + '</div>'
+            + specBox()
+            + '<a class="m-cta" href="#" onclick="return false;">Shop this system</a>'
+            + '</div></div></div>';
+
+          var paths = '<div class="m-section pin-target"><span class="pin tl">4</span>'
+            + '<h3 class="m-h">Two ways to get yours</h3>' + pathsBlock() + '</div>';
+
+          var color = '<div class="m-section">' + colorHelpBlock() + '</div>';
+
+          var bottom = '<div class="m-bottom-banner pin-target"><span class="pin tr">6</span>'
+            + '<p class="big">Ready when you are.</p>'
+            + '<p style="color:#cfc9ba; margin:0;">Same code as up top, repeated here so nobody has to scroll back for it.</p>'
+            + codeChip()
+            + '<a class="m-cta" href="#" onclick="return false;" style="max-width:340px; margin-left:auto; margin-right:auto;">Shop with $50 off</a></div>';
+
+          var body = intro + ba + watch + product + paths + color + bottom;
+          return '<div class="mock' + (isDesktop ? " desktop" : "") + '">' + topbar()
+            + '<div class="m-body">' + body + '</div>' + footerMock() + '</div>';
+        }
+
+        /* ---------- CURRENT mobile (as described in the findings) ---------- */
+        function currentMock() {
+          var productFirst = '<div class="m-section pin-target"><span class="pin tl">A</span>'
+            + '<div class="m-current-profile">'
+            + '<div class="ph ph-wrap m-profile-pic">' + headSVG("after", "Jared's profile photo", 76) + '</div>'
+            + '<p class="m-current-profile-note">First thing on the page: Jared\'s circular profile pic — with no name or intro attached, so it reads as a random headshot.</p>'
+            + '</div>'
+            + '<div class="ph ph-wrap m-product-photo"><span>PRODUCT PHOTO</span><span class="ph-label">SECOND — THE PRODUCT</span></div>'
+            + '<p class="m-price">$605</p>'
+            + '<p class="m-prod-name">Argyle Hair System</p>'
+            + '<p>Straight from the unlabeled pic to the product and price — before any story or before &amp; afters.</p>'
+            + '<a class="m-cta" href="#" onclick="return false;">Add to cart</a></div>';
+
+          var ba1 = '<div class="m-section"><h3 class="m-h">Before &amp; after</h3>' + baPair("Pair one", 1) + '</div>';
+
+          var swatch = '<div class="m-section"><h3 class="m-h">Pick your color</h3>' + swatchRow()
+            + '<div class="m-select"><span>Color — pick from the dropdown</span><span aria-hidden="true">▾</span></div></div>';
+
+          var ba2 = '<div class="m-section pin-target"><span class="pin tl">B</span>'
+            + baPair("", 2)
+            + '<p style="font-size:12.5px; color:#a39a86;">Second pair, below the swatch, with no heading — it reads as lost.</p></div>';
+
+          var picks = '<div class="m-section pin-target"><span class="pin tl">C</span>'
+            + '<h3 class="m-h">Product Picks</h3>'
+            + '<div class="mini-prod"><div class="ph thumb" style="border-radius:9px;">RING</div>'
+            + '<div><p class="t">Hair Color Swatch Ring</p><p class="s">Sitting in Product Picks — while the products Jared actually uses aren\'t listed yet.</p></div></div>'
+            + '<p style="margin-top:12px;">Nothing here explains the mail-in, steers a first-timer to a salon fitting, or puts Jared\'s code where anyone will see it.</p></div>';
+
+          var gap = '<div class="m-gap pin-target"><span class="pin tl">D</span>LONG BLANK GAP</div>';
+
+          return '<div class="mock">' + topbar() + '<div class="m-body">'
+            + productFirst + ba1 + swatch + ba2 + picks + gap
+            + '</div>' + footerMock() + '</div>';
+        }
+
+        /* ---------- notes data ---------- */
+        var NOTES = {
+          proposed: {
+            title: "What changed, and why",
+            sub: "Six changes plus the video slot, numbered to match the pins above.",
+            items: [
+              { n: "1", t: "Story first, then product", d: "Name, short intro, and Jared's photo open the page — then the before & afters, then the product. Today mobile opens on that same profile pic alone, with no name or intro attached, then jumps straight to the $605 product." },
+              { n: "2", t: "Before & afters grouped", d: "Both pairs sit together under one heading, the way desktop already does it. On mobile today, the second pair turns up below the color swatch with no heading and looks lost." },
+              { n: "3", t: "Code sits with the product", d: "UNBALD50 (pending confirmation) appears right where the buying decision happens, not buried where it has to be hunted for." },
+              { n: "4", t: "Two paths under the product", d: "Already wearing one: the mail-in, step by step. Brand new: get fitted at a salon first for a template and color match, then reorders are easy. No first-timer buys blind off this page." },
+              { n: "5", t: "Swatch ring moved to color help", d: "Out of Product Picks, into the color help area where it belongs. New guys get matched in person; current wearers already know their color. Product Picks stays empty until the products Jared uses are listed." },
+              { n: "6", t: "Code again at the bottom — and no dead space", d: "The code repeats at the foot of the page so nobody scrolls back for it, and the big blank gap above the footer is closed up." },
+              { n: "7", t: "Video slot, when it's ready", d: "A YouTube Short of Jared styling and wearing the system, embedded in a vertical player so it plays right on the page. Not a day-one ask." }
+            ]
+          },
+          current: {
+            title: "What's wrong with the page today",
+            sub: "Four specific spots, plus one that applies to the whole page.",
+            items: [
+              { n: "A", t: "Profile pic, then price — no name or intro", d: "Mobile opens on Jared's circular profile pic, with no name or intro attached to it, so it reads as a random headshot. Then it goes straight to the $605 product and price, before any story or before & afters — if a guy arrives from a video, the page doesn't connect to it.", problem: true },
+              { n: "B", t: "Second before & after is stranded", d: "It shows up below the color swatch with no heading, separated from the first pair. Desktop groups them; mobile doesn't.", problem: true },
+              { n: "C", t: "Swatch ring in Product Picks", d: "A color-matching tool merchandised as a product pick — while the section is otherwise empty because the products Jared uses aren't listed yet.", problem: true },
+              { n: "D", t: "Dead space above the footer", d: "A long blank gap before the footer, on mobile and worse on desktop. Pure scroll with nothing in it.", problem: true },
+              { n: "E", t: "No paths, no guidance", d: "Nothing explains the mail-in for current wearers (the main reason one would buy), nothing steers a first-timer to a salon fitting, and the code is easy to miss entirely.", problem: true }
+            ]
+          }
+        };
+
+        var stage = document.getElementById("stage");
+        var notesEl = document.getElementById("notes");
+        var notesTitle = document.getElementById("notes-title");
+        var notesSub = document.getElementById("notes-sub");
+        var hint = document.getElementById("view-hint");
+        var pinsOn = true;
+        var view = "mobile";
+
+        var HINTS = {
+          current: "The page as it stands today, on mobile — problems pinned A–D.",
+          mobile: "Proposed mobile layout, in Jared's suggested order.",
+          desktop: "Proposed desktop layout — same content, roomier arrangement."
+        };
+
+        function renderNotes(key) {
+          var data = NOTES[key];
+          notesTitle.textContent = data.title;
+          notesSub.textContent = data.sub;
+          var html = "";
+          data.items.forEach(function (it) {
+            html += '<article class="note' + (it.problem ? " problem" : "") + '"><span class="n">' + it.n
+              + '</span><h3>' + it.t + '</h3><p>' + it.d + '</p></article>';
+          });
+          notesEl.innerHTML = html;
+        }
+
+        function render() {
+          var inner;
+          if (view === "current") {
+            inner = '<div class="phone"><div class="screen">' + currentMock() + '</div></div>';
+          } else if (view === "mobile") {
+            inner = '<div class="phone"><div class="screen">' + proposedMock(false) + '</div></div>';
+          } else {
+            inner = '<div class="browser"><div class="browser-bar"><span class="bdots"><i></i><i></i><i></i></span>'
+              + '<span class="url">toupeesbyargyle.com — Jared\'s page</span></div>'
+              + '<div class="screen">' + proposedMock(true) + '</div></div>';
+          }
+          stage.innerHTML = inner;
+          stage.classList.toggle("show-pins", pinsOn);
+          hint.textContent = HINTS[view];
+          renderNotes(view === "current" ? "current" : "proposed");
+          ["current", "mobile", "desktop"].forEach(function (v) {
+            document.getElementById("btn-" + v).setAttribute("aria-pressed", v === view ? "true" : "false");
+          });
+        }
+
+        document.getElementById("btn-current").addEventListener("click", function () { view = "current"; render(); });
+        document.getElementById("btn-mobile").addEventListener("click", function () { view = "mobile"; render(); });
+        document.getElementById("btn-desktop").addEventListener("click", function () { view = "desktop"; render(); });
+        document.getElementById("btn-pins").addEventListener("click", function () {
+          pinsOn = !pinsOn;
+          this.setAttribute("aria-pressed", pinsOn ? "true" : "false");
+          stage.classList.toggle("show-pins", pinsOn);
+        });
+
+        render();
+      })();
+    </script>
+  </body>
+</html>
